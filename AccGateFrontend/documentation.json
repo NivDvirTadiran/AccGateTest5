@@ -124,24 +124,24 @@
     "interfaces": [
         {
             "name": "User",
-            "id": "interface-User-9c7e5f1bbbab702cb032307d130876cb68969b0cd4eedef32a0c8cad8081a54e5f8f577ed6ad4539c1b99a1d246cb34031d198c2ea8eba440e64e91b14f01fdc",
+            "id": "interface-User-dcc5c3137cd472dd0002d85b562efd23162e3eff53ca4438a6251e6c46e3b8299076255380d1d42f386510cb6f2cbaab49fa5b5f253be459cdc3869428c5c400",
             "file": "src/stories/User.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface User {}\n",
+            "sourceCode": "export interface User {}\r\n",
             "properties": [],
             "indexSignatures": [],
             "methods": []
         },
         {
             "name": "User",
-            "id": "interface-User-9c7e5f1bbbab702cb032307d130876cb68969b0cd4eedef32a0c8cad8081a54e5f8f577ed6ad4539c1b99a1d246cb34031d198c2ea8eba440e64e91b14f01fdc-1",
+            "id": "interface-User-dcc5c3137cd472dd0002d85b562efd23162e3eff53ca4438a6251e6c46e3b8299076255380d1d42f386510cb6f2cbaab49fa5b5f253be459cdc3869428c5c400-1",
             "file": "src/app/login/User.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface User {}\n",
+            "sourceCode": "export interface User {}\r\n",
             "properties": [],
             "indexSignatures": [],
             "methods": [],
@@ -962,7 +962,7 @@
     "guards": [
         {
             "name": "AppRoutingGuard",
-            "id": "injectable-AppRoutingGuard-fcaecc1db5e52728e94a87a77e074833a2f6d09af597d1bf0b0b9899e9648ade6957ed3d437e3b025bb1e4b383537fb031ada6b73f0fabdeddcb54f63e849981",
+            "id": "injectable-AppRoutingGuard-2f9d507a9358ab637253f075dfd92840449bd935d3ce0ffed34293d46b1d162dcabaf090d7354b5161c2db22dd2bc44b2bd0748141ea6a5f136dce16393d909b",
             "file": "src/app/app-routing.guard.ts",
             "properties": [],
             "methods": [
@@ -1188,7 +1188,7 @@
             "deprecationMessage": "",
             "description": "",
             "rawdescription": "\n",
-            "sourceCode": "import { Injectable } from '@angular/core';\nimport { ActivatedRouteSnapshot, CanActivate, CanActivateChild, CanDeactivate, CanLoad, Route, RouterStateSnapshot, UrlSegment, UrlTree } from '@angular/router';\nimport { Observable } from 'rxjs';\nimport { AppComponent } from './app.component';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class AppRoutingGuard implements CanActivate, CanActivateChild, CanDeactivate<unknown>, CanLoad {\n\n  constructor(private app: AppComponent) {}\n\n  canActivate(\n    route: ActivatedRouteSnapshot,\n    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {\n    return this.isApproved();\n  }\n  canActivateChild(\n    childRoute: ActivatedRouteSnapshot,\n    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {\n    return this.isApproved();\n  }\n  canDeactivate(\n    component: unknown,\n    currentRoute: ActivatedRouteSnapshot,\n    currentState: RouterStateSnapshot,\n    nextState?: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {\n    return this.isApproved();\n  }\n  canLoad(\n    route: Route,\n    segments: UrlSegment[]): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {\n    return this.isApproved();\n  }\n\n  private isApproved(): boolean {\n    console.log('isLoggedIn?   '+this.app.isLoggedIn);\n    if (!this.app.isLoggedIn) {\n      console.log(!this.app.isLoggedIn);\n      //this.router.navigateByUrl(\"/login\");\n      return false;\n    } else {\n      return true;\n    }\n  }\n}\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\r\nimport { ActivatedRouteSnapshot, CanActivate, CanActivateChild, CanDeactivate, CanLoad, Route, RouterStateSnapshot, UrlSegment, UrlTree } from '@angular/router';\r\nimport { Observable } from 'rxjs';\r\nimport { AppComponent } from './app.component';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class AppRoutingGuard implements CanActivate, CanActivateChild, CanDeactivate<unknown>, CanLoad {\r\n\r\n  constructor(private app: AppComponent) {}\r\n\r\n  canActivate(\r\n    route: ActivatedRouteSnapshot,\r\n    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {\r\n    return this.isApproved();\r\n  }\r\n  canActivateChild(\r\n    childRoute: ActivatedRouteSnapshot,\r\n    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {\r\n    return this.isApproved();\r\n  }\r\n  canDeactivate(\r\n    component: unknown,\r\n    currentRoute: ActivatedRouteSnapshot,\r\n    currentState: RouterStateSnapshot,\r\n    nextState?: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {\r\n    return this.isApproved();\r\n  }\r\n  canLoad(\r\n    route: Route,\r\n    segments: UrlSegment[]): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {\r\n    return this.isApproved();\r\n  }\r\n\r\n  private isApproved(): boolean {\r\n    console.log('isLoggedIn?   '+this.app.isLoggedIn);\r\n    if (!this.app.isLoggedIn) {\r\n      console.log(!this.app.isLoggedIn);\r\n      //this.router.navigateByUrl(\"/login\");\r\n      return false;\r\n    } else {\r\n      return true;\r\n    }\r\n  }\r\n}\r\n",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
@@ -2098,7 +2098,7 @@
         },
         {
             "name": "Button2Component",
-            "id": "component-Button2Component-d36f198588af482c674373aebbf01568ccec308f8279db34803f01fd03c94224f66fbf6f2901ead377ee697681d88dc8daf566e97f1a296014da1d7341c88860",
+            "id": "component-Button2Component-f2b272926844d5f5a9daad1a5c94d462d617603846b84463c54bf9d43ff26fa4133b3781d1464e87bcb9f11ec76039658cca9d2393fa4048acfe0296b7244d03",
             "file": "src/app/login/button2/button2.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2131,15 +2131,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 703,
-                            "end": 716,
+                            "pos": 738,
+                            "end": 752,
                             "flags": 4227072,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 325,
                             "tagName": {
-                                "pos": 704,
-                                "end": 712,
+                                "pos": 739,
+                                "end": 747,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -2199,11 +2199,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button2',\n  template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\">\n    {{ label }}\n  </button>`,\n  styleUrls: ['./button2.css'],\n})\nexport class Button2Component {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'accGateButton2';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button2--primary' : 'storybook-button2--secondary';\n\n    return ['storybook-button2', `storybook-button2--${this.size}`, mode];\n  }\n}\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-button2',\r\n  template: ` <button\r\n    type=\"button\"\r\n    (click)=\"onClick.emit($event)\"\r\n    [ngClass]=\"classes\"\r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\">\r\n    {{ label }}\r\n  </button>`,\r\n  styleUrls: ['./button2.css'],\r\n})\r\nexport class Button2Component {\r\n  /**\r\n   * Is this the principal call to action on the page?\r\n   */\r\n  @Input()\r\n  primary = false;\r\n\r\n  /**\r\n   * What background color to use\r\n   */\r\n  @Input()\r\n  backgroundColor?: string;\r\n\r\n  /**\r\n   * How large should the button be?\r\n   */\r\n  @Input()\r\n  size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  /**\r\n   * Button contents\r\n   *\r\n   * @required\r\n   */\r\n  @Input()\r\n  label = 'accGateButton2';\r\n\r\n  /**\r\n   * Optional click handler\r\n   */\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.primary ? 'storybook-button2--primary' : 'storybook-button2--secondary';\r\n\r\n    return ['storybook-button2', `storybook-button2--${this.size}`, mode];\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".storybook-button2 {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button2--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button2--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button2--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button2--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button2--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
+                    "data": ".storybook-button2 {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  font-weight: 700;\r\n  border: 0;\r\n  border-radius: 3em;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  line-height: 1;\r\n}\r\n.storybook-button2--primary {\r\n  color: white;\r\n  background-color: #1ea7fd;\r\n}\r\n.storybook-button2--secondary {\r\n  color: #333;\r\n  background-color: transparent;\r\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\r\n}\r\n.storybook-button2--small {\r\n  font-size: 12px;\r\n  padding: 10px 16px;\r\n}\r\n.storybook-button2--medium {\r\n  font-size: 14px;\r\n  padding: 11px 20px;\r\n}\r\n.storybook-button2--large {\r\n  font-size: 16px;\r\n  padding: 12px 24px;\r\n}\r\n",
                     "styleUrl": "./button2.css"
                 }
             ],
@@ -2222,7 +2222,7 @@
         },
         {
             "name": "Button3Component",
-            "id": "component-Button3Component-29ee8e8255302338e42f3817fb85497ad84f0cea4829c1e89d7af344a073652d04564b08d67ec02ffde50cd2db8c500c2756fc02f94090899db6c3f939867cab",
+            "id": "component-Button3Component-acc948050eea7d69de87f80eb842e7831e5ee710a501557f6052ca4c88e2ee2011e9d6558a11bed590f7a60bdea272b929125b27523b94164ea1647698d974e9",
             "file": "src/app/login/button3/button3.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2256,15 +2256,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 569,
-                            "end": 582,
+                            "pos": 598,
+                            "end": 612,
                             "flags": 4227072,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 325,
                             "tagName": {
-                                "pos": 570,
-                                "end": 578,
+                                "pos": 599,
+                                "end": 607,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -2324,7 +2324,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button3',\n  templateUrl: './button3.component.html',\n  styleUrls: ['./button3.component.css']\n})\nexport class Button3Component {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'accGateButton2';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button3--primary' : 'storybook-button3--secondary';\n\n    return ['storybook-button3', `storybook-button3--${this.size}`, mode];\n  }\n\n\n}\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-button3',\r\n  templateUrl: './button3.component.html',\r\n  styleUrls: ['./button3.component.css']\r\n})\r\nexport class Button3Component {\r\n  /**\r\n   * Is this the principal call to action on the page?\r\n   */\r\n  @Input()\r\n  primary = false;\r\n\r\n  /**\r\n   * What background color to use\r\n   */\r\n  @Input()\r\n  backgroundColor?: string;\r\n\r\n  /**\r\n   * How large should the button be?\r\n   */\r\n  @Input()\r\n  size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  /**\r\n   * Button contents\r\n   *\r\n   * @required\r\n   */\r\n  @Input()\r\n  label = 'accGateButton2';\r\n\r\n  /**\r\n   * Optional click handler\r\n   */\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.primary ? 'storybook-button3--primary' : 'storybook-button3--secondary';\r\n\r\n    return ['storybook-button3', `storybook-button3--${this.size}`, mode];\r\n  }\r\n\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -2344,11 +2344,11 @@
                     }
                 }
             },
-            "templateData": "<button type=\"button\" (click)=\"onClick.emit($event)\" [ngClass]=\"classes\"\n        [ngStyle]=\"{ 'background-color': backgroundColor }\">\n  {{ label }}\n</button>\n"
+            "templateData": "<button type=\"button\" (click)=\"onClick.emit($event)\" [ngClass]=\"classes\"\r\n        [ngStyle]=\"{ 'background-color': backgroundColor }\">\r\n  {{ label }}\r\n</button>\r\n"
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-2ad612b7e1d2540f955178be20371bee861d04187c648f178d80fe79707e7895aa8ede69b3320a96d1c92536eb932ed06f80cdf4fbc0c6597ee776956d0f9ba2",
+            "id": "component-ButtonComponent-54a765004b82a0730483ea5ad3b99c50bffd1bc6fb954564e9347bca2cc63b05a5205685a28fae9b406602085533bf89edf72416a76592724068e5aeffca34bd",
             "file": "src/stories/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2381,15 +2381,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 711,
-                            "end": 724,
+                            "pos": 747,
+                            "end": 761,
                             "flags": 4227072,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 325,
                             "tagName": {
-                                "pos": 712,
-                                "end": 720,
+                                "pos": 748,
+                                "end": 756,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -2449,11 +2449,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n    {{ label }}\n  </button>`,\n  styleUrls: ['./button.css'],\n})\nexport default class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'accGateButton';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-button',\r\n  template: ` <button\r\n    type=\"button\"\r\n    (click)=\"onClick.emit($event)\"\r\n    [ngClass]=\"classes\"\r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n    {{ label }}\r\n  </button>`,\r\n  styleUrls: ['./button.css'],\r\n})\r\nexport default class ButtonComponent {\r\n  /**\r\n   * Is this the principal call to action on the page?\r\n   */\r\n  @Input()\r\n  primary = false;\r\n\r\n  /**\r\n   * What background color to use\r\n   */\r\n  @Input()\r\n  backgroundColor?: string;\r\n\r\n  /**\r\n   * How large should the button be?\r\n   */\r\n  @Input()\r\n  size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  /**\r\n   * Button contents\r\n   *\r\n   * @required\r\n   */\r\n  @Input()\r\n  label = 'accGateButton';\r\n\r\n  /**\r\n   * Optional click handler\r\n   */\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\r\n\r\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".storybook-button {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
+                    "data": ".storybook-button {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  font-weight: 700;\r\n  border: 0;\r\n  border-radius: 3em;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  line-height: 1;\r\n}\r\n.storybook-button--primary {\r\n  color: white;\r\n  background-color: #1ea7fd;\r\n}\r\n.storybook-button--secondary {\r\n  color: #333;\r\n  background-color: transparent;\r\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\r\n}\r\n.storybook-button--small {\r\n  font-size: 12px;\r\n  padding: 10px 16px;\r\n}\r\n.storybook-button--medium {\r\n  font-size: 14px;\r\n  padding: 11px 20px;\r\n}\r\n.storybook-button--large {\r\n  font-size: 16px;\r\n  padding: 12px 24px;\r\n}\r\n",
                     "styleUrl": "./button.css"
                 }
             ],
@@ -2472,7 +2472,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-0e0043bad568a1784989e7710c35a0bbe387688aa1155a48aced32422e2a5bc8b8564b89f73ca1a852c109f7e88a1db307230a32b2b5502e2d14a4f64f44db99-1",
+            "id": "component-ButtonComponent-4d026cb91f3bb9568a875a8731145c5b89b9192384b2d4d5512e9ea2f3f71a6f4148d7b783ef6339ba18e046bca52c536108463be0d0038113edae652c8a2f30-1",
             "file": "src/app/login/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2505,15 +2505,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 697,
-                            "end": 710,
+                            "pos": 729,
+                            "end": 743,
                             "flags": 4227072,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 325,
                             "tagName": {
-                                "pos": 698,
-                                "end": 706,
+                                "pos": 730,
+                                "end": 738,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -2573,11 +2573,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  styleUrls: ['./button.component.css'],\n  template: ` <button type=\"button\" (click)=\"onClick.emit($event)\" [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\">\n    {{ label }}\n  </button>`\n})\nexport class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'accGateButton';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-button',\r\n  styleUrls: ['./button.component.css'],\r\n  template: ` <button type=\"button\" (click)=\"onClick.emit($event)\" [ngClass]=\"classes\"\r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\">\r\n    {{ label }}\r\n  </button>`\r\n})\r\nexport class ButtonComponent {\r\n  /**\r\n   * Is this the principal call to action on the page?\r\n   */\r\n  @Input()\r\n  primary = false;\r\n\r\n  /**\r\n   * What background color to use\r\n   */\r\n  @Input()\r\n  backgroundColor?: string;\r\n\r\n  /**\r\n   * How large should the button be?\r\n   */\r\n  @Input()\r\n  size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  /**\r\n   * Button contents\r\n   *\r\n   * @required\r\n   */\r\n  @Input()\r\n  label = 'accGateButton';\r\n\r\n  /**\r\n   * Optional click handler\r\n   */\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\r\n\r\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".storybook-button {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
+                    "data": ".storybook-button {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  font-weight: 700;\r\n  border: 0;\r\n  border-radius: 3em;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  line-height: 1;\r\n}\r\n.storybook-button--primary {\r\n  color: white;\r\n  background-color: #1ea7fd;\r\n}\r\n.storybook-button--secondary {\r\n  color: #333;\r\n  background-color: transparent;\r\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\r\n}\r\n.storybook-button--small {\r\n  font-size: 12px;\r\n  padding: 10px 16px;\r\n}\r\n.storybook-button--medium {\r\n  font-size: 14px;\r\n  padding: 11px 20px;\r\n}\r\n.storybook-button--large {\r\n  font-size: 16px;\r\n  padding: 12px 24px;\r\n}\r\n",
                     "styleUrl": "./button.component.css"
                 }
             ],
@@ -2599,7 +2599,7 @@
         },
         {
             "name": "Header2Component",
-            "id": "component-Header2Component-176e3324c8960235cef8ad33e5a483a9f80f6849ee1631c8c56c25d9ba8821f5d1eaa727cb54334e88519d0ea8345e138974838e5de1b714d6b2a49b8f20c2dc",
+            "id": "component-Header2Component-fb35173354aa94148422ba6636073af1b4d0d07435066bed4c126220cf0c5590503c664058b9f28835fcd81d984600950ce8f240ba1115439689785a61d1be7d",
             "file": "src/stories/header2.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2660,11 +2660,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport { User } from './User';\n\n@Component({\n  selector: 'storybook-header2',\n  template: `  <nav class=\"navbar navbar-expand navbar-dark bg-dark\">\n\n    <a href=\"#\" class=\"navbar-brand\">\n      <img _ngcontent-c0=\"accGate\" class=\"nav-img\" srcset=\"./assets/images/TadiranTelecom2.webp\"  width=\"56\"\n           height=\"56\"><label>accGate</label>\n    </a>\n    <ul class=\"navbar-nav mr-auto\" routerLinkActive=\"active\">\n      <li class=\"nav-item\">\n        <a href=\"/page\" class=\"nav-link\" routerLink=\"page\">Page </a>\n      </li>\n      <li class=\"nav-item\">\n        <a href=\"/home\" class=\"nav-link\" routerLink=\"home\">Home </a>\n      </li>\n      <li class=\"nav-item\" *ngIf=\"showAdminBoard\">\n        <a href=\"/admin\" class=\"nav-link\" routerLink=\"admin\">Admin Board</a>\n      </li>\n      <li class=\"nav-item\" *ngIf=\"showModeratorBoard\">\n        <a href=\"/mod\" class=\"nav-link\" routerLink=\"mod\">Moderator Board</a>\n      </li>\n      <li class=\"nav-item\">\n        <a href=\"/user\" class=\"nav-link\" *ngIf=\"isLoggedIn\" routerLink=\"user\">User</a>\n      </li>\n    </ul>\n\n    <ul class=\"navbar-nav ml-auto\" *ngIf=\"!isLoggedIn\">\n      <li class=\"nav-item\">\n        <a href=\"/register\" class=\"nav-link\" routerLink=\"register\">Sign Up</a>\n      </li>\n      <li class=\"nav-item\">\n        <a href=\"/login\" class=\"nav-link\" routerLink=\"login\">Login</a>\n      </li>\n    </ul>\n\n    <ul class=\"navbar-nav ml-auto\" *ngIf=\"isLoggedIn\">\n      <li class=\"nav-item\">\n        <a href=\"/profile\" class=\"nav-link\" routerLink=\"profile\">{{ username }}</a>\n      </li>\n      <li class=\"nav-item\">\n        <a href class=\"nav-link\" (click)=\"logout()\">LogOut</a>\n      </li>\n    </ul>\n  </nav>`,\n  styleUrls: ['./header.css'],\n})\nexport default class Header2Component {\n  @Input()\n  user: User | null = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { User } from './User';\r\n\r\n@Component({\r\n  selector: 'storybook-header2',\r\n  template: `  <nav class=\"navbar navbar-expand navbar-dark bg-dark\">\r\n\r\n    <a href=\"#\" class=\"navbar-brand\">\r\n      <img _ngcontent-c0=\"accGate\" class=\"nav-img\" srcset=\"./assets/images/TadiranTelecom2.webp\"  width=\"56\"\r\n           height=\"56\"><label>accGate</label>\r\n    </a>\r\n    <ul class=\"navbar-nav mr-auto\" routerLinkActive=\"active\">\r\n      <li class=\"nav-item\">\r\n        <a href=\"/page\" class=\"nav-link\" routerLink=\"page\">Page </a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a href=\"/home\" class=\"nav-link\" routerLink=\"home\">Home </a>\r\n      </li>\r\n      <li class=\"nav-item\" *ngIf=\"showAdminBoard\">\r\n        <a href=\"/admin\" class=\"nav-link\" routerLink=\"admin\">Admin Board</a>\r\n      </li>\r\n      <li class=\"nav-item\" *ngIf=\"showModeratorBoard\">\r\n        <a href=\"/mod\" class=\"nav-link\" routerLink=\"mod\">Moderator Board</a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a href=\"/user\" class=\"nav-link\" *ngIf=\"isLoggedIn\" routerLink=\"user\">User</a>\r\n      </li>\r\n    </ul>\r\n\r\n    <ul class=\"navbar-nav ml-auto\" *ngIf=\"!isLoggedIn\">\r\n      <li class=\"nav-item\">\r\n        <a href=\"/register\" class=\"nav-link\" routerLink=\"register\">Sign Up</a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a href=\"/login\" class=\"nav-link\" routerLink=\"login\">Login</a>\r\n      </li>\r\n    </ul>\r\n\r\n    <ul class=\"navbar-nav ml-auto\" *ngIf=\"isLoggedIn\">\r\n      <li class=\"nav-item\">\r\n        <a href=\"/profile\" class=\"nav-link\" routerLink=\"profile\">{{ username }}</a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a href class=\"nav-link\" (click)=\"logout()\">LogOut</a>\r\n      </li>\r\n    </ul>\r\n  </nav>`,\r\n  styleUrls: ['./header.css'],\r\n})\r\nexport default class Header2Component {\r\n  @Input()\r\n  user: User | null = null;\r\n\r\n  @Output()\r\n  onLogin = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onLogout = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onCreateAccount = new EventEmitter<Event>();\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".wrapper {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\nsvg {\n  display: inline-block;\n  vertical-align: top;\n}\n\nh1 {\n  font-weight: 900;\n  font-size: 20px;\n  line-height: 1;\n  margin: 6px 0 6px 10px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nbutton + button {\n  margin-left: 10px;\n}\n\n.welcome {\n  color: #333;\n  font-size: 14px;\n  margin-right: 10px;\n}\n",
+                    "data": ".wrapper {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\r\n  padding: 15px 20px;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n}\r\n\r\nsvg {\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\nh1 {\r\n  font-weight: 900;\r\n  font-size: 20px;\r\n  line-height: 1;\r\n  margin: 6px 0 6px 10px;\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\nbutton + button {\r\n  margin-left: 10px;\r\n}\r\n\r\n.welcome {\r\n  color: #333;\r\n  font-size: 14px;\r\n  margin-right: 10px;\r\n}\r\n",
                     "styleUrl": "./header.css"
                 }
             ],
@@ -2672,7 +2672,7 @@
         },
         {
             "name": "HeaderComponent",
-            "id": "component-HeaderComponent-7dd418ed83ce807bc2c5837f09c03c59aaf423c8134042af11caaa7c4155a43271885962f924c36b1dbb021a2d752bd8721b8f4c571e768411bcd7cefbd0f75b",
+            "id": "component-HeaderComponent-9df14a4ec13b7d549a17be7ba4990da7faa1e8e22c470b4237be30dfc228a5bbdeb886cc6a512995acc423b4b4844ce5df368c84d62dce0f4029293064cecf1f",
             "file": "src/stories/header.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2733,11 +2733,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport { User } from './User';\n\n@Component({\n  selector: 'storybook-header',\n  template: `<header>\n    <div class=\"wrapper\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\" >\n          </storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            [primary]=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>`,\n  styleUrls: ['./header.css'],\n})\nexport default class HeaderComponent {\n  @Input()\n  user: User | null = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { User } from './User';\r\n\r\n@Component({\r\n  selector: 'storybook-header',\r\n  template: `<header>\r\n    <div class=\"wrapper\">\r\n      <div>\r\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\r\n          <g fill=\"none\" fillRule=\"evenodd\">\r\n            <path\r\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\r\n              fill=\"#FFF\"\r\n            />\r\n            <path\r\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\r\n              fill=\"#555AB9\"\r\n            />\r\n            <path\r\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\r\n              fill=\"#91BAF8\"\r\n            />\r\n          </g>\r\n        </svg>\r\n        <h1>Acme</h1>\r\n      </div>\r\n      <div>\r\n        <div *ngIf=\"user\">\r\n          <span class=\"welcome\">\r\n            Welcome, <b>{{ user }}</b\r\n            >!\r\n          </span>\r\n          <storybook-button\r\n            *ngIf=\"user\"\r\n            size=\"small\"\r\n            (onClick)=\"onLogout.emit($event)\"\r\n            label=\"Log out\" >\r\n          </storybook-button>\r\n        </div>\r\n        <div *ngIf=\"!user\">\r\n          <storybook-button\r\n            *ngIf=\"!user\"\r\n            size=\"small\"\r\n            class=\"margin-left\"\r\n            (onClick)=\"onLogin.emit($event)\"\r\n            label=\"Log in\"\r\n          ></storybook-button>\r\n          <storybook-button\r\n            *ngIf=\"!user\"\r\n            size=\"small\"\r\n            [primary]=\"true\"\r\n            class=\"margin-left\"\r\n            (onClick)=\"onCreateAccount.emit($event)\"\r\n            label=\"Sign up\"\r\n          ></storybook-button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </header>`,\r\n  styleUrls: ['./header.css'],\r\n})\r\nexport default class HeaderComponent {\r\n  @Input()\r\n  user: User | null = null;\r\n\r\n  @Output()\r\n  onLogin = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onLogout = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onCreateAccount = new EventEmitter<Event>();\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".wrapper {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\nsvg {\n  display: inline-block;\n  vertical-align: top;\n}\n\nh1 {\n  font-weight: 900;\n  font-size: 20px;\n  line-height: 1;\n  margin: 6px 0 6px 10px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nbutton + button {\n  margin-left: 10px;\n}\n\n.welcome {\n  color: #333;\n  font-size: 14px;\n  margin-right: 10px;\n}\n",
+                    "data": ".wrapper {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\r\n  padding: 15px 20px;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n}\r\n\r\nsvg {\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\nh1 {\r\n  font-weight: 900;\r\n  font-size: 20px;\r\n  line-height: 1;\r\n  margin: 6px 0 6px 10px;\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\nbutton + button {\r\n  margin-left: 10px;\r\n}\r\n\r\n.welcome {\r\n  color: #333;\r\n  font-size: 14px;\r\n  margin-right: 10px;\r\n}\r\n",
                     "styleUrl": "./header.css"
                 }
             ],
@@ -2846,6 +2846,151 @@
                 "OnInit"
             ],
             "templateData": "<div class=\"container \">\r\n  <br>\r\n  <header class=\"background jumbotron  \">\r\n    <h1 class=\"font_0\">\r\n      <span class=\"\" style=\"font-size:44px;\">\r\n        <dl>\r\n          <dt><span>{{ content }}</span></dt>\r\n          <dd><span>{{ ACC_VERSION }}</span></dd>\r\n        </dl>\r\n      </span>\r\n    </h1>\r\n  </header>\r\n\r\n  <aside>\r\n    <!-- Card -->\r\n    <div class=\"fa-pull-right bg-image card shadow-1-strong card-img\">\r\n      <div class=\"card-body text-white\">\r\n        <h5 class=\"card-title\">Card title</h5>\r\n        <p class=\"card-text\">\r\n          Some quick example text to build on the card title and make up the bulk of the\r\n          card's content.\r\n        </p>\r\n        <a href=\"#!\" class=\"btn btn-outline-light\">Button</a>\r\n      </div>\r\n    </div>\r\n    <!-- Card -->\r\n  </aside>\r\n\r\n  <div class=\"alert alert-success  \" role=\"alert\">\r\n    <h4 class=\"alert-heading \">Well done!</h4>\r\n    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\r\n    <hr>\r\n    <p class=\"mb-0\">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\r\n  </div>\r\n\r\n</div>\r\n"
+        },
+        {
+            "name": "LanguageIconComponent",
+            "id": "component-LanguageIconComponent-24d90f87ca49a0129cc1a456b2b87500aa55143433ae3241ff6968718ebd5f88a8188feab98c5d2a7e63182a297b714efc3f797bbc8db0ee72c800788be0e03c",
+            "file": "src/app/page/language-icon/language-icon.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-language-icon",
+            "styleUrls": [
+                "./language-icon.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./language-icon.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhat background color to use\n",
+                    "description": "<p>What background color to use</p>\n",
+                    "line": 19,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'accGateButton2'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 621,
+                            "end": 635,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 622,
+                                "end": 630,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nButton contents\n\n",
+                    "description": "<p>Button contents</p>\n",
+                    "line": 33,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "primary",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
+                    "description": "<p>Is this the principal call to action on the page?</p>\n",
+                    "line": 13,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nHow large should the button be?\n",
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 25,
+                    "type": "\"small\" | \"medium\" | \"large\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nOptional click handler\n",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 39,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 50,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-language-icon',\r\n  templateUrl: './language-icon.component.html',\r\n  styleUrls: ['./language-icon.component.css']\r\n})\r\nexport class LanguageIconComponent {\r\n  /**\r\n   * Is this the principal call to action on the page?\r\n   */\r\n  @Input()\r\n  primary = false;\r\n\r\n  /**\r\n   * What background color to use\r\n   */\r\n  @Input()\r\n  backgroundColor?: string;\r\n\r\n  /**\r\n   * How large should the button be?\r\n   */\r\n  @Input()\r\n  size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  /**\r\n   * Button contents\r\n   *\r\n   * @required\r\n   */\r\n  @Input()\r\n  label = 'accGateButton2';\r\n\r\n  /**\r\n   * Optional click handler\r\n   */\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.primary ? 'storybook-language-icon--primary' : 'storybook-language-icon--secondary';\r\n\r\n    return ['storybook-language-icon', `storybook-language-icon--${this.size}`, mode];\r\n  }\r\n\r\n\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {\r\n  }\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./language-icon.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 45
+            },
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 41
+                    }
+                }
+            },
+            "templateData": "<p>language-icon works!</p>\r\n<button type=\"button\" (click)=\"onClick.emit($event)\" [ngClass]=\"classes\"\r\n        [ngStyle]=\"{ 'background-color': backgroundColor }\">\r\n  {{ label }}\r\n</button>\r\n"
         },
         {
             "name": "LoginComponent",
@@ -3153,7 +3298,7 @@
         },
         {
             "name": "Page2Component",
-            "id": "component-Page2Component-74d4a5f2f1b5dc2a7cb2146a1a57f69712719f23f64e58eede0892c74413cd802fb114bfb01593ad701b680dcc18d5018b97714b39a279d1b16b61b48b9d7cca",
+            "id": "component-Page2Component-1c225f7b48ff692fb74137b7f4d9511dec9ae7d395c343fa009fd5e0f503155cdfb3317d64eaa20c29ee8b0470e267a8bd9c51d48ebe389b5dc458076b5e6d6c",
             "file": "src/app/page/page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -3180,20 +3325,20 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n\n\n@Component({\n  selector: 'storybook-page2',\n  templateUrl: './page.component.html',\n  styleUrls: ['./page.component.scss']\n})\nexport default class Page2Component {\n  /*user: User | null = null;\n\n  doLogout() {\n    this.user = null;\n  }\n\n  doLogin() {\n    this.user = { name: 'Jane Doe' };\n  }\n\n  doCreateAccount() {\n    this.user = { name: 'Jane Doe' };\n  }*/\n}\n\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n\r\n\r\n@Component({\r\n  selector: 'storybook-page2',\r\n  templateUrl: './page.component.html',\r\n  styleUrls: ['./page.component.scss']\r\n})\r\nexport default class Page2Component {\r\n  /*user: User | null = null;\r\n\r\n  doLogout() {\r\n    this.user = null;\r\n  }\r\n\r\n  doLogin() {\r\n    this.user = { name: 'Jane Doe' };\r\n  }\r\n\r\n  doCreateAccount() {\r\n    this.user = { name: 'Jane Doe' };\r\n  }*/\r\n}\r\n\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "\r\n.Desktop-1Login-1 {\r\n  width: 1920px;\r\n  height: 1080px;\r\n  background: linear-gradient(228.37deg, #EFF8FF 22.25%, #B0DCFF 88.18%);\r\n}\r\n\r\n.Frame-1 {\r\n  width: 1920px;\r\n  height: 1080px;\r\n  flex-grow: 0;\r\n}\r\n\r\n.fa-pull-left {float:left}\r\n\r\n.fa-pull-right {float:right}\r\n\r\nimg.icon-1 {\r\n  position: absolute;\r\n  width: 305.7px;\r\n  height: 309px;\r\n  transform: rotate(0deg);\r\n  background-position: bottom;\r\n}\r\n\r\nimg.icon-2 {\r\n  position: absolute;\r\n  bottom: 0;\r\n  right: 0;\r\n  width: 300px;\r\n  height: 250px;\r\n  margin-right: 1em;\r\n  object-fit: none;\r\n}\r\n\r\n\r\n\r\n",
+                    "data": "\r\n.Desktop-1Login-1 {\r\n  width: 1920px;\r\n  height: 1080px;\r\n  background: linear-gradient(228.37deg, #EFF8FF 22.25%, #B0DCFF 88.18%);\r\n}\r\ndiv.relative {\r\n  position: relative;\r\n  width: 1920px;\r\n  height: 1080px;\r\n}\r\n\r\ndiv.absolute {\r\n  position: absolute;\r\n  bottom: 0;\r\n  right: 0;\r\n  width: 200px;\r\n  height: 100px;\r\n}\r\n\r\n\r\n.Frame-1 {\r\n  width: 1920px;\r\n  height: 1080px;\r\n  flex-grow: 0;\r\n}\r\n\r\n.fa-pull-left {float:left}\r\n\r\n.fa-pull-right {float:right}\r\n\r\nimg.icon-1 {\r\n  position: absolute;\r\n  width: 305.7px;\r\n  height: 309px;\r\n  transform: rotate(0deg);\r\n  background-position: bottom;\r\n}\r\n\r\nimg.icon-2 {\r\n  position: absolute;\r\n  bottom: 0;\r\n  right: 0;\r\n  width: 394px;\r\n  height: 402px;\r\n  flex-grow: 0;\r\n}\r\n\r\n\r\n\r\n",
                     "styleUrl": "./page.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "\n<div class=\"Frame-1 \">\n  <div class=\"Desktop-1Login-1\">\n\n    <img src=\"assets/images/icon-1.webp\" srcset=\"/assets/images/icon-1@2x.webp 2x, /assets/images/icon-1@3x.webp 3x\"\n         class=\"icon-1\" alt=\"icon-1\" />\n\n    <img src=\"assets/images/icon-2.webp\" srcset=\"/assets/images/icon-2@2x.webp 2x, /assets/images/icon-2@3x.webp 3x\"\n         class=\"icon-2  \" alt=\"icon-2szd\" />\n\n\n\n  </div>\n\n</div>\n\n<!--article>\n  <storybook-header\n    [user]=\"user\"\n    (onLogout)=\"doLogout()\"\n    (onLogin)=\"doLogin()\"\n    (onCreateAccount)=\"doCreateAccount()\"></storybook-header>\n  <section>\n  </section>\n\n</article-->\n\n\n\n"
+            "templateData": "\r\n<html>\r\n<head>\r\n  <style>\r\n\r\n  </style>\r\n</head>\r\n<body>\r\n<div class=\"Frame-1 relative\">\r\n  <div class=\"Desktop-1Login-1\">\r\n\r\n    <img src=\"assets/images/icon-1.webp\" srcset=\"/assets/images/icon-1@2x.webp 2x, /assets/images/icon-1@3x.webp 3x\"\r\n         class=\"icon-1\" alt=\"icon-1\" />\r\n\r\n    <img src=\"assets/images/icon-2.webp\" srcset=\"/assets/images/icon-2@2x.webp 2x, /assets/images/icon-2@3x.webp 3x\"\r\n         class=\"icon-2  \" alt=\"icon-2szd\" />\r\n\r\n\r\n\r\n  </div>\r\n\r\n</div>\r\n\r\n</body>\r\n</html>\r\n\r\n\r\n\r\n\r\n\r\n<!--article>\r\n  <storybook-header\r\n    [user]=\"user\"\r\n    (onLogout)=\"doLogout()\"\r\n    (onLogin)=\"doLogin()\"\r\n    (onCreateAccount)=\"doCreateAccount()\"></storybook-header>\r\n  <section>\r\n  </section>\r\n\r\n</article-->\r\n\r\n\r\n\r\n"
         },
         {
             "name": "PageComponent",
-            "id": "component-PageComponent-7126d8c2607c946741c651482413b43feb72b2d63cac9d3ac173fde206a5e635eb4cdbf7ca7ac9327c7d4d05cf7ef619144c34c11609ad677081d0ee4e855064",
+            "id": "component-PageComponent-1fc7c24c98b4f0b0f413d91f5a6126f11ad55647457f5a7f372b7f83fe8ecd6dbe67b5ca4b826ed20b9bfbc04d5606b15f82a203b1311f98b18bd28ec9f4fc7c",
             "file": "src/stories/page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -3261,11 +3406,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport { User } from './User';\n\n@Component({\n  selector: 'storybook-page',\n  template: `<article>\n    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section>\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>`,\n  styleUrls: ['./page.css'],\n})\nexport default class PageComponent {\n  user: User | null = null;\n\n  doLogout() {\n    this.user = null;\n  }\n\n  doLogin() {\n    this.user = { name: 'Jane Doe' };\n  }\n\n  doCreateAccount() {\n    this.user = { name: 'Jane Doe' };\n  }\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { User } from './User';\r\n\r\n@Component({\r\n  selector: 'storybook-page',\r\n  template: `<article>\r\n    <storybook-header\r\n      [user]=\"user\"\r\n      (onLogout)=\"doLogout()\"\r\n      (onLogin)=\"doLogin()\"\r\n      (onCreateAccount)=\"doCreateAccount()\"\r\n    ></storybook-header>\r\n    <section>\r\n      <h2>Pages in Storybook</h2>\r\n      <p>\r\n        We recommend building UIs with a\r\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n          <strong>component-driven</strong>\r\n        </a>\r\n        process starting with atomic components and ending with pages.\r\n      </p>\r\n      <p>\r\n        Render pages with mock data. This makes it easy to build and review page states without\r\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\r\n        in Storybook:\r\n      </p>\r\n      <ul>\r\n        <li>\r\n          Use a higher-level connected component. Storybook helps you compose such data from the\r\n          \"args\" of child component stories\r\n        </li>\r\n        <li>\r\n          Assemble data in the page component from your services. You can mock these services out\r\n          using Storybook.\r\n        </li>\r\n      </ul>\r\n      <p>\r\n        Get a guided tutorial on component-driven development at\r\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n          Storybook tutorials\r\n        </a>\r\n        . Read more in the\r\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\r\n        .\r\n      </p>\r\n      <div class=\"tip-wrapper\">\r\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\r\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\r\n          <g fill=\"none\" fillRule=\"evenodd\">\r\n            <path\r\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\r\n              id=\"a\"\r\n              fill=\"#999\"\r\n            />\r\n          </g>\r\n        </svg>\r\n        Viewports addon in the toolbar\r\n      </div>\r\n    </section>\r\n  </article>`,\r\n  styleUrls: ['./page.css'],\r\n})\r\nexport default class PageComponent {\r\n  user: User | null = null;\r\n\r\n  doLogout() {\r\n    this.user = null;\r\n  }\r\n\r\n  doLogin() {\r\n    this.user = { name: 'Jane Doe' };\r\n  }\r\n\r\n  doCreateAccount() {\r\n    this.user = { name: 'Jane Doe' };\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "section {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 24px;\n  padding: 48px 20px;\n  margin: 0 auto;\n  max-width: 600px;\n  color: #333;\n}\n\nsection h2 {\n  font-weight: 900;\n  font-size: 32px;\n  line-height: 1;\n  margin: 0 0 4px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nsection p {\n  margin: 1em 0;\n}\n\nsection a {\n  text-decoration: none;\n  color: #1ea7fd;\n}\n\nsection ul {\n  padding-left: 30px;\n  margin: 1em 0;\n}\n\nsection li {\n  margin-bottom: 8px;\n}\n\nsection .tip {\n  display: inline-block;\n  border-radius: 1em;\n  font-size: 11px;\n  line-height: 12px;\n  font-weight: 700;\n  background: #e7fdd8;\n  color: #66bf3c;\n  padding: 4px 12px;\n  margin-right: 10px;\n  vertical-align: top;\n}\n\nsection .tip-wrapper {\n  font-size: 13px;\n  line-height: 20px;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n\nsection .tip-wrapper svg {\n  display: inline-block;\n  height: 12px;\n  width: 12px;\n  margin-right: 4px;\n  vertical-align: top;\n  margin-top: 3px;\n}\n\nsection .tip-wrapper svg path {\n  fill: #1ea7fd;\n}\n",
+                    "data": "section {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  font-size: 14px;\r\n  line-height: 24px;\r\n  padding: 48px 20px;\r\n  margin: 0 auto;\r\n  max-width: 600px;\r\n  color: #333;\r\n}\r\n\r\nsection h2 {\r\n  font-weight: 900;\r\n  font-size: 32px;\r\n  line-height: 1;\r\n  margin: 0 0 4px;\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\nsection p {\r\n  margin: 1em 0;\r\n}\r\n\r\nsection a {\r\n  text-decoration: none;\r\n  color: #1ea7fd;\r\n}\r\n\r\nsection ul {\r\n  padding-left: 30px;\r\n  margin: 1em 0;\r\n}\r\n\r\nsection li {\r\n  margin-bottom: 8px;\r\n}\r\n\r\nsection .tip {\r\n  display: inline-block;\r\n  border-radius: 1em;\r\n  font-size: 11px;\r\n  line-height: 12px;\r\n  font-weight: 700;\r\n  background: #e7fdd8;\r\n  color: #66bf3c;\r\n  padding: 4px 12px;\r\n  margin-right: 10px;\r\n  vertical-align: top;\r\n}\r\n\r\nsection .tip-wrapper {\r\n  font-size: 13px;\r\n  line-height: 20px;\r\n  margin-top: 40px;\r\n  margin-bottom: 40px;\r\n}\r\n\r\nsection .tip-wrapper svg {\r\n  display: inline-block;\r\n  height: 12px;\r\n  width: 12px;\r\n  margin-right: 4px;\r\n  vertical-align: top;\r\n  margin-top: 3px;\r\n}\r\n\r\nsection .tip-wrapper svg path {\r\n  fill: #1ea7fd;\r\n}\r\n",
                     "styleUrl": "./page.css"
                 }
             ],
@@ -3733,7 +3878,7 @@
         },
         {
             "name": "RegisterFormComponent",
-            "id": "component-RegisterFormComponent-2bcb4f62dce73f7ca380982a7d9639c927814462e825c2895047566614f6477d20dccd06b08721aa6bebbefcf3c154d7deb07f798c96be3c9abb8a2f73d91821",
+            "id": "component-RegisterFormComponent-b686b262aa19a8067c182a66bee67402ed1cdca54fc5c24cb711d5ee695646b7d8d86631542c9676addb32b85750c66afa38542e4120d70f2d62174dd55fb2d7",
             "file": "src/app/login/register-form/register-form.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -3883,7 +4028,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport { MdbModalRef } from 'mdb-angular-ui-kit/modal';\nimport { AuthService } from '../../_services/auth.service';\nimport { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';\n\n@Component({\n  selector: 'app-modal',\n  templateUrl: './register-form.component.html',\n  styleUrls: ['./register-form.component.css']\n})\nexport class RegisterFormComponent {\n  validationForm: FormGroup;\n  isSuccessful = false;\n  isSignUpFailed = false;\n  submitted = false;\n  errorMessage = '';\n  empList: Array<String> = [];\n  apiResponse = { message: '', error: false };\n  errorFieldSubmitted: any = {};\n  closeResult = '';\n\n  constructor(public modalRef: MdbModalRef<RegisterFormComponent>,\n              private authService: AuthService) {\n    this.validationForm = new FormGroup({\n      userName: new FormControl(null, Validators.required),\n      email: new FormControl(null, Validators.email),\n      password: new FormControl('', Validators.minLength(1)),\n      phone: new FormControl(null, Validators.pattern(new RegExp(\"[0-9 ]{12}\")))\n    });\n    this.empList.push(\"admin\");\n  }\n\n  ngOnInit(): void {\n  }\n\n  onSubmit(): void {\n    this.submitted = true;\n    const { userName, email, password, phone } = this.validationForm.value;\n    this.authService.registerForm(userName, email, password, phone).subscribe(\n      data => {\n        console.log(data);\n        this.isSuccessful = true;\n        this.isSignUpFailed = false;\n        this.errorFieldSubmitted = {};\n        this.apiResponse.error = false;\n        this.apiResponse.message = 'Successful registration';\n      },\n      error => {\n        const errorResponse = JSON.parse(error.error);\n        this.apiResponse.error = true;\n        this.apiResponse.message = 'Registration error';\n        this.errorMessage = error.error.message;\n        this.isSignUpFailed = true;\n        if (errorResponse.error && errorResponse.message === 'VALIDATION_FAILED') {\n          this.errorFieldSubmitted = errorResponse.data;\n        }\n      }, () => {console.log(\"Registration Complete\");\n                        this.modalRef.close(\"Registration Complete\");}\n    );\n  }\n\n  get userName(): AbstractControl {\n    return this.validationForm.get('userName')!;\n  }\n\n  get email(): AbstractControl {\n    return this.validationForm.get('email')!;\n  }\n\n  get password(): AbstractControl {\n    return this.validationForm.get('password')!;\n  }\n\n  get phone(): AbstractControl {\n    return this.validationForm.get('phone')!;\n  }\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { MdbModalRef } from 'mdb-angular-ui-kit/modal';\r\nimport { AuthService } from '../../_services/auth.service';\r\nimport { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';\r\n\r\n@Component({\r\n  selector: 'app-modal',\r\n  templateUrl: './register-form.component.html',\r\n  styleUrls: ['./register-form.component.css']\r\n})\r\nexport class RegisterFormComponent {\r\n  validationForm: FormGroup;\r\n  isSuccessful = false;\r\n  isSignUpFailed = false;\r\n  submitted = false;\r\n  errorMessage = '';\r\n  empList: Array<String> = [];\r\n  apiResponse = { message: '', error: false };\r\n  errorFieldSubmitted: any = {};\r\n  closeResult = '';\r\n\r\n  constructor(public modalRef: MdbModalRef<RegisterFormComponent>,\r\n              private authService: AuthService) {\r\n    this.validationForm = new FormGroup({\r\n      userName: new FormControl(null, Validators.required),\r\n      email: new FormControl(null, Validators.email),\r\n      password: new FormControl('', Validators.minLength(1)),\r\n      phone: new FormControl(null, Validators.pattern(new RegExp(\"[0-9 ]{12}\")))\r\n    });\r\n    this.empList.push(\"admin\");\r\n  }\r\n\r\n  ngOnInit(): void {\r\n  }\r\n\r\n  onSubmit(): void {\r\n    this.submitted = true;\r\n    const { userName, email, password, phone } = this.validationForm.value;\r\n    this.authService.registerForm(userName, email, password, phone).subscribe(\r\n      data => {\r\n        console.log(data);\r\n        this.isSuccessful = true;\r\n        this.isSignUpFailed = false;\r\n        this.errorFieldSubmitted = {};\r\n        this.apiResponse.error = false;\r\n        this.apiResponse.message = 'Successful registration';\r\n      },\r\n      error => {\r\n        const errorResponse = JSON.parse(error.error);\r\n        this.apiResponse.error = true;\r\n        this.apiResponse.message = 'Registration error';\r\n        this.errorMessage = error.error.message;\r\n        this.isSignUpFailed = true;\r\n        if (errorResponse.error && errorResponse.message === 'VALIDATION_FAILED') {\r\n          this.errorFieldSubmitted = errorResponse.data;\r\n        }\r\n      }, () => {console.log(\"Registration Complete\");\r\n                        this.modalRef.close(\"Registration Complete\");}\r\n    );\r\n  }\r\n\r\n  get userName(): AbstractControl {\r\n    return this.validationForm.get('userName')!;\r\n  }\r\n\r\n  get email(): AbstractControl {\r\n    return this.validationForm.get('email')!;\r\n  }\r\n\r\n  get password(): AbstractControl {\r\n    return this.validationForm.get('password')!;\r\n  }\r\n\r\n  get phone(): AbstractControl {\r\n    return this.validationForm.get('phone')!;\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -3971,11 +4116,11 @@
                     }
                 }
             },
-            "templateData": "<div class=\"modal-header\">\n  <!--div class=\"text-center\"-->\n    <label class=\"white-text mb-2 mt-2 font-weight-bold fas\">\n      <strong>REGISTRATION</strong>\n      <a class=\"green-text font-weight-bold\">\n        <strong> FORM</strong>\n      </a>\n    </label>\n\n  <!--/div-->\n  <button type=\"button\" class=\"btn-close\" aria-label=\"Close\" (click)='modalRef.close(\"xbutton\")'></button>\n\n  <!--h5 class=\"modal-title\" id=\"exampleModalLabel\">REGISTRATION</h5-->\n\n</div>\n<div class=\"modal-body py-4 text-center expansionCard\">\n  <img id=\"profile-img\" src=\"../../../AccGate/assets/images/T.png\"\n       class=\"profile-img-card\"  alt=\"\"/>\n  <div class=\"text-white rgba-stylish-strong py-5 px-5 z-depth-2\">\n\n\n  <form *ngIf=\"!isSuccessful\" [formGroup]=\"validationForm\">\n\n  <!--###################### Username input field ###################### -->\n  <div class=\"form-outline\">\n    <mdb-form-control  class=\"form-outline\">\n    <input [mdbValidate]=\"true\" mdbInput type=\"text\" id=\"typeText\"\n           class=\"form-control\"  formControlName=\"userName\" required />\n    <label class=\"form-label \" for=\"typeText\" >UserName input</label>\n    <mdb-error *ngIf=\"userName?.invalid && (userName?.dirty || userName?.touched)\">\n      First name is required\n    </mdb-error>\n    <mdb-success *ngIf=\"userName?.valid && (userName?.dirty || userName?.touched)\">\n      Looks good!\n    </mdb-success>\n    </mdb-form-control>\n  </div>\n\n  <br>\n\n    <!--###################### Email input field ###################### -->\n  <div class=\"form-outline\">\n    <mdb-form-control  class=\"form-outline\">\n      <input [mdbValidate]=\"true\" mdbInput type=\"email\" id=\"typeEmail\"\n             class=\"form-control\" formControlName=\"email\" required />\n      <label mdbLabel class=\"form-label form-white\" for=\"typeEmail\">Email input</label>\n      <mdb-error *ngIf=\"email?.invalid && (email?.dirty || email?.touched)\">\n        Email is required\n      </mdb-error>\n      <mdb-success *ngIf=\"email?.valid && (email?.dirty || email?.touched)\">\n        Looks good!\n      </mdb-success>\n    </mdb-form-control>\n  </div>\n\n\n  <br>\n\n    <!--###################### Password input field ###################### -->\n  <div class=\"form-outline\">\n    <mdb-form-control  class=\"form-outline\">\n    <input [mdbValidate]=\"true\" mdbInput type=\"password\" id=\"typePassword\"\n           class=\"form-control\" formControlName=\"password\" required minlength=\"1\" />\n    <label mdbLabel class=\"form-label form-white\" for=\"typePassword\">Password input</label>\n    <mdb-error *ngIf=\"password?.invalid && (password?.dirty || password?.touched)\">\n      Password is required\n    </mdb-error>\n      <!--mdb-error *ngIf=\"email?.errors.length\">  Username must be at least 3 characters</mdb-error-->\n    <mdb-success *ngIf=\"password?.valid && (password?.dirty || password?.touched)\">\n      Looks good!\n    </mdb-success>\n    </mdb-form-control>\n    <span class=\"text-danger error-input\" *ngIf=\"submitted && errorFieldSubmitted['password']\"\n          style=\"white-space: pre-line;  font-size: 14px;\">\n          {{errorFieldSubmitted['password'] | apiErrorMessage}}\n      <br><br>\n    </span>\n  </div>\n\n\n  <br>\n\n    <!--###################### Phone input field ###################### -->\n  <div class=\"form-outline\">\n    <mdb-form-control  class=\"form-outline\">\n    <input [mdbValidate]=\"true\" mdbInput type=\"tel\" id=\"typePhone\"\n           class=\"form-control\" formControlName=\"phone\" required />\n    <label mdbLabel class=\"form-label form-white\" for=\"typePhone\">Phone number input</label>\n    <mdb-error *ngIf=\"phone?.invalid && (phone?.dirty || phone?.touched)\">\n      Phone is required\n    </mdb-error>\n    <mdb-success *ngIf=\"phone?.valid && (phone?.dirty || phone?.touched)\">\n      Looks good!\n    </mdb-success>\n    </mdb-form-control>\n  </div>\n  <!--mdb-form-control>\n    <input mdbInput  type=\"text\" class=\"form-control\" id=\"exampleDatepicker\"/>\n    <label mdbLabel for=\"exampleDatepicker\" class=\"form-label\">Select a date</label>\n    <ngb-datepicker-month [NgbDatepicker]=\"datepicker\"></ngb-datepicker-month>\n    <ngb-datepicker #dateSelect></ngb-datepicker>\n  </mdb-form-control-->\n    <!--div class=\"form-group\">\n      <button class=\"btn btn-primary btn-block\">Login</button>\n    </div-->\n    <!--Grid row-->\n    <div  *ngIf=\"!isSuccessful\" class=\"row d-flex align-items-lg-center \">\n      <!--Grid column-->\n      <div class=\"form-group text-center mb-2  col-md-12 \">\n        <button type=\"button\" (click)=\"onSubmit()\" class=\"btn btn-success btn-block btn-rounded z-depth-1 waves-effect waves-light\">Register</button>\n      </div>\n    </div>\n  </form>\n  </div>\n\n  <div class=\"alert alert-success\" *ngIf=\"isSuccessful\">\n    Your registration is successful!\n  </div>\n\n\n  <div hidden class=\"list-group-horizontal mb-4 col-md-12\">\n    <button type=\"button\" class=\" fa-pull-left btn btn-primary\">Save changes</button>\n    <!--button type=\"button\" class=\"fa-pull-right btn btn-secondary\" (click)=\"this.modalRef.close()\">Close</button-->\n  </div>\n\n  <br>\n</div>\n\n\n\n<div class=\"modal-content \">\n    <div class=\"modal-footer fal\">\n      <input type=\"checkbox\" class=\" form-check-input\" id=\"checkbox7\">\n      <label for=\"checkbox7\" class=\"form-check-label white-text\">Subscribe to our <a href=\"#\" class=\"green-text font-weight-bold\"> newsletter?</a></label>\n  </div>\n</div>\n\n\n"
+            "templateData": "<div class=\"modal-header\">\r\n  <!--div class=\"text-center\"-->\r\n    <label class=\"white-text mb-2 mt-2 font-weight-bold fas\">\r\n      <strong>REGISTRATION</strong>\r\n      <a class=\"green-text font-weight-bold\">\r\n        <strong> FORM</strong>\r\n      </a>\r\n    </label>\r\n\r\n  <!--/div-->\r\n  <button type=\"button\" class=\"btn-close\" aria-label=\"Close\" (click)='modalRef.close(\"xbutton\")'></button>\r\n\r\n  <!--h5 class=\"modal-title\" id=\"exampleModalLabel\">REGISTRATION</h5-->\r\n\r\n</div>\r\n<div class=\"modal-body py-4 text-center expansionCard\">\r\n  <img id=\"profile-img\" src=\"../../../AccGate/assets/images/T.png\"\r\n       class=\"profile-img-card\"  alt=\"\"/>\r\n  <div class=\"text-white rgba-stylish-strong py-5 px-5 z-depth-2\">\r\n\r\n\r\n  <form *ngIf=\"!isSuccessful\" [formGroup]=\"validationForm\">\r\n\r\n  <!--###################### Username input field ###################### -->\r\n  <div class=\"form-outline\">\r\n    <mdb-form-control  class=\"form-outline\">\r\n    <input [mdbValidate]=\"true\" mdbInput type=\"text\" id=\"typeText\"\r\n           class=\"form-control\"  formControlName=\"userName\" required />\r\n    <label class=\"form-label \" for=\"typeText\" >UserName input</label>\r\n    <mdb-error *ngIf=\"userName?.invalid && (userName?.dirty || userName?.touched)\">\r\n      First name is required\r\n    </mdb-error>\r\n    <mdb-success *ngIf=\"userName?.valid && (userName?.dirty || userName?.touched)\">\r\n      Looks good!\r\n    </mdb-success>\r\n    </mdb-form-control>\r\n  </div>\r\n\r\n  <br>\r\n\r\n    <!--###################### Email input field ###################### -->\r\n  <div class=\"form-outline\">\r\n    <mdb-form-control  class=\"form-outline\">\r\n      <input [mdbValidate]=\"true\" mdbInput type=\"email\" id=\"typeEmail\"\r\n             class=\"form-control\" formControlName=\"email\" required />\r\n      <label mdbLabel class=\"form-label form-white\" for=\"typeEmail\">Email input</label>\r\n      <mdb-error *ngIf=\"email?.invalid && (email?.dirty || email?.touched)\">\r\n        Email is required\r\n      </mdb-error>\r\n      <mdb-success *ngIf=\"email?.valid && (email?.dirty || email?.touched)\">\r\n        Looks good!\r\n      </mdb-success>\r\n    </mdb-form-control>\r\n  </div>\r\n\r\n\r\n  <br>\r\n\r\n    <!--###################### Password input field ###################### -->\r\n  <div class=\"form-outline\">\r\n    <mdb-form-control  class=\"form-outline\">\r\n    <input [mdbValidate]=\"true\" mdbInput type=\"password\" id=\"typePassword\"\r\n           class=\"form-control\" formControlName=\"password\" required minlength=\"1\" />\r\n    <label mdbLabel class=\"form-label form-white\" for=\"typePassword\">Password input</label>\r\n    <mdb-error *ngIf=\"password?.invalid && (password?.dirty || password?.touched)\">\r\n      Password is required\r\n    </mdb-error>\r\n      <!--mdb-error *ngIf=\"email?.errors.length\">  Username must be at least 3 characters</mdb-error-->\r\n    <mdb-success *ngIf=\"password?.valid && (password?.dirty || password?.touched)\">\r\n      Looks good!\r\n    </mdb-success>\r\n    </mdb-form-control>\r\n    <span class=\"text-danger error-input\" *ngIf=\"submitted && errorFieldSubmitted['password']\"\r\n          style=\"white-space: pre-line;  font-size: 14px;\">\r\n          {{errorFieldSubmitted['password'] | apiErrorMessage}}\r\n      <br><br>\r\n    </span>\r\n  </div>\r\n\r\n\r\n  <br>\r\n\r\n    <!--###################### Phone input field ###################### -->\r\n  <div class=\"form-outline\">\r\n    <mdb-form-control  class=\"form-outline\">\r\n    <input [mdbValidate]=\"true\" mdbInput type=\"tel\" id=\"typePhone\"\r\n           class=\"form-control\" formControlName=\"phone\" required />\r\n    <label mdbLabel class=\"form-label form-white\" for=\"typePhone\">Phone number input</label>\r\n    <mdb-error *ngIf=\"phone?.invalid && (phone?.dirty || phone?.touched)\">\r\n      Phone is required\r\n    </mdb-error>\r\n    <mdb-success *ngIf=\"phone?.valid && (phone?.dirty || phone?.touched)\">\r\n      Looks good!\r\n    </mdb-success>\r\n    </mdb-form-control>\r\n  </div>\r\n  <!--mdb-form-control>\r\n    <input mdbInput  type=\"text\" class=\"form-control\" id=\"exampleDatepicker\"/>\r\n    <label mdbLabel for=\"exampleDatepicker\" class=\"form-label\">Select a date</label>\r\n    <ngb-datepicker-month [NgbDatepicker]=\"datepicker\"></ngb-datepicker-month>\r\n    <ngb-datepicker #dateSelect></ngb-datepicker>\r\n  </mdb-form-control-->\r\n    <!--div class=\"form-group\">\r\n      <button class=\"btn btn-primary btn-block\">Login</button>\r\n    </div-->\r\n    <!--Grid row-->\r\n    <div  *ngIf=\"!isSuccessful\" class=\"row d-flex align-items-lg-center \">\r\n      <!--Grid column-->\r\n      <div class=\"form-group text-center mb-2  col-md-12 \">\r\n        <button type=\"button\" (click)=\"onSubmit()\" class=\"btn btn-success btn-block btn-rounded z-depth-1 waves-effect waves-light\">Register</button>\r\n      </div>\r\n    </div>\r\n  </form>\r\n  </div>\r\n\r\n  <div class=\"alert alert-success\" *ngIf=\"isSuccessful\">\r\n    Your registration is successful!\r\n  </div>\r\n\r\n\r\n  <div hidden class=\"list-group-horizontal mb-4 col-md-12\">\r\n    <button type=\"button\" class=\" fa-pull-left btn btn-primary\">Save changes</button>\r\n    <!--button type=\"button\" class=\"fa-pull-right btn btn-secondary\" (click)=\"this.modalRef.close()\">Close</button-->\r\n  </div>\r\n\r\n  <br>\r\n</div>\r\n\r\n\r\n\r\n<div class=\"modal-content \">\r\n    <div class=\"modal-footer fal\">\r\n      <input type=\"checkbox\" class=\" form-check-input\" id=\"checkbox7\">\r\n      <label for=\"checkbox7\" class=\"form-check-label white-text\">Subscribe to our <a href=\"#\" class=\"green-text font-weight-bold\"> newsletter?</a></label>\r\n  </div>\r\n</div>\r\n\r\n\r\n"
         },
         {
             "name": "ReplacePassFormComponent",
-            "id": "component-ReplacePassFormComponent-bee5c560a93abb310661a2ee79e3cce0d5d7bf6d401c82379daf3a05ce2bf1a0bcded997d5fa62d82b00aa4c0301f4387657ad48ea16cf11775b6b3644b66d77",
+            "id": "component-ReplacePassFormComponent-eeb68c4c96451d735197c334c7fa2a46a70ada2d88c27ede8f77816e723fb3a419688c2d20fa2677d290d51b3735403ed3d9f28792c3980a2a018085515729e2",
             "file": "src/app/login/replace-pass-form/replace-pass-form.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -4125,7 +4270,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport { MdbModalRef } from 'mdb-angular-ui-kit/modal';\nimport {AuthService} from \"../../_services/auth.service\";\nimport {AbstractControl, FormControl, FormGroup, Validators} from \"@angular/forms\";\n\n@Component({\n  selector: 'app-modal',\n  templateUrl: './replace-pass-form.component.html',\n  styleUrls: ['./replace-pass-form.component.css']\n})\nexport class ReplacePassFormComponent {\n  replacePassForm: FormGroup;\n  isSuccessful = false;\n  isSignUpFailed = false;\n  submitted = false;\n  errorMessage = '';\n  empList: Array<String> = [];\n  apiResponse = { message: '', error: false };\n  errorFieldSubmitted: any = {};\n  closeResult = '';\n\n  constructor(public modalRef: MdbModalRef<ReplacePassFormComponent>,\n              private authService: AuthService) {\n    this.replacePassForm = new FormGroup({\n      userName: new FormControl(null, Validators.required),\n      oldPassword: new FormControl(null, Validators.minLength(1)),\n      password: new FormControl('', Validators.minLength(3)),\n      confirmPassword: new FormControl(null, Validators.minLength(3))\n    });\n  }\n\n  ngOnInit(): void {\n  }\n\n  onSubmit(): void {\n    this.submitted = true;\n    const { userName, oldPassword, password, confirmPassword } = this.replacePassForm.value;\n    this.authService.replacePassForm(userName, oldPassword, password, confirmPassword).subscribe(\n      data => {\n        console.log(data);\n        this.isSuccessful = true;\n        this.isSignUpFailed = false;\n        this.errorFieldSubmitted = {};\n        this.apiResponse.error = false;\n        this.apiResponse.message = 'Successful registration';\n      },\n      error => {\n        const errorResponse = JSON.parse(error.error);\n        this.apiResponse.error = true;\n        this.apiResponse.message = 'Registration error';\n        this.errorMessage = error.error.message;\n        this.isSignUpFailed = true;\n        if (errorResponse.error && errorResponse.message === 'VALIDATION_FAILED') {\n          this.errorFieldSubmitted = errorResponse.data;\n        }\n      }, () => {this.modalRef.close()}\n    );\n  }\n\n\n\n  get userName(): AbstractControl {\n    return this.replacePassForm.get('userName')!;\n  }\n\n  get oldPassword(): AbstractControl {\n    return this.replacePassForm.get('oldPassword')!;\n  }\n\n  get password(): AbstractControl {\n    return this.replacePassForm.get('password')!;\n  }\n\n  get confirmPassword(): AbstractControl {\n    return this.replacePassForm.get('confirmPassword')!;\n  }\n\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { MdbModalRef } from 'mdb-angular-ui-kit/modal';\r\nimport {AuthService} from \"../../_services/auth.service\";\r\nimport {AbstractControl, FormControl, FormGroup, Validators} from \"@angular/forms\";\r\n\r\n@Component({\r\n  selector: 'app-modal',\r\n  templateUrl: './replace-pass-form.component.html',\r\n  styleUrls: ['./replace-pass-form.component.css']\r\n})\r\nexport class ReplacePassFormComponent {\r\n  replacePassForm: FormGroup;\r\n  isSuccessful = false;\r\n  isSignUpFailed = false;\r\n  submitted = false;\r\n  errorMessage = '';\r\n  empList: Array<String> = [];\r\n  apiResponse = { message: '', error: false };\r\n  errorFieldSubmitted: any = {};\r\n  closeResult = '';\r\n\r\n  constructor(public modalRef: MdbModalRef<ReplacePassFormComponent>,\r\n              private authService: AuthService) {\r\n    this.replacePassForm = new FormGroup({\r\n      userName: new FormControl(null, Validators.required),\r\n      oldPassword: new FormControl(null, Validators.minLength(1)),\r\n      password: new FormControl('', Validators.minLength(3)),\r\n      confirmPassword: new FormControl(null, Validators.minLength(3))\r\n    });\r\n  }\r\n\r\n  ngOnInit(): void {\r\n  }\r\n\r\n  onSubmit(): void {\r\n    this.submitted = true;\r\n    const { userName, oldPassword, password, confirmPassword } = this.replacePassForm.value;\r\n    this.authService.replacePassForm(userName, oldPassword, password, confirmPassword).subscribe(\r\n      data => {\r\n        console.log(data);\r\n        this.isSuccessful = true;\r\n        this.isSignUpFailed = false;\r\n        this.errorFieldSubmitted = {};\r\n        this.apiResponse.error = false;\r\n        this.apiResponse.message = 'Successful registration';\r\n      },\r\n      error => {\r\n        const errorResponse = JSON.parse(error.error);\r\n        this.apiResponse.error = true;\r\n        this.apiResponse.message = 'Registration error';\r\n        this.errorMessage = error.error.message;\r\n        this.isSignUpFailed = true;\r\n        if (errorResponse.error && errorResponse.message === 'VALIDATION_FAILED') {\r\n          this.errorFieldSubmitted = errorResponse.data;\r\n        }\r\n      }, () => {this.modalRef.close()}\r\n    );\r\n  }\r\n\r\n\r\n\r\n  get userName(): AbstractControl {\r\n    return this.replacePassForm.get('userName')!;\r\n  }\r\n\r\n  get oldPassword(): AbstractControl {\r\n    return this.replacePassForm.get('oldPassword')!;\r\n  }\r\n\r\n  get password(): AbstractControl {\r\n    return this.replacePassForm.get('password')!;\r\n  }\r\n\r\n  get confirmPassword(): AbstractControl {\r\n    return this.replacePassForm.get('confirmPassword')!;\r\n  }\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -4213,19 +4358,19 @@
                     }
                 }
             },
-            "templateData": "<div class=\"modal-header\">\n  <!--div class=\"text-center\"-->\n    <label class=\"white-text mb-2 mt-2 font-weight-bold fas\">\n      <strong>REPLACE PASSWORD</strong>\n      <a class=\"green-text font-weight-bold\">\n        <strong> FORM</strong>\n      </a>\n    </label>\n\n  <!--/div-->\n  <button type=\"button\" class=\"btn btn-close white-text \" aria-label=\"Close\" (click)='modalRef.close(\"xbutton\")'></button>\n\n  <!--h5 class=\"modal-title\" id=\"exampleModalLabel\">REGISTRATION</h5-->\n\n</div>\n<div class=\"modal-body py-4 text-center expansionCard\">\n  <figure class=\"figure\">\n  <img aria-setsize=\"20\"  id=\"profile-img\" src=\"../../../AccGate/assets/images/T.png\"\n       class=\"profile-img-card img-fluid rounded \"  alt=\"\"/>\n    <figcaption class=\"figure-caption text-center text-capitalize\">Tadiran Telecom</figcaption>\n  </figure>\n  <div class=\"text-white rgba-stylish-strong py-4 px-5 z-depth-2\" style=\"border-bottom: 2rem\">\n  <!--div class=\"form-outline\">\n    <input type=\"text\" id=\"typeText\" class=\"form-control\" />\n    <label  class=\"form-label\" for=\"typeText\">Your UserName</label>\n  </div-->\n\n  <form *ngIf=\"!isSuccessful\" [formGroup]=\"replacePassForm\">\n\n  <!--###################### Username input field ###################### -->\n  <div class=\"form-outline\">\n    <mdb-form-control  class=\"form-outline\">\n      <input [mdbValidate]=\"true\" mdbInput type=\"text\" id=\"typeText\"\n             class=\"form-control\"  formControlName=\"userName\" required />\n      <label class=\"form-label \" for=\"typeText\" >Username input</label>\n      <mdb-error *ngIf=\"userName?.invalid && (userName?.dirty || userName?.touched)\">\n        Username is required\n      </mdb-error>\n      <mdb-success *ngIf=\"userName?.valid && (userName?.dirty || userName?.touched)\">\n        Looks good!\n      </mdb-success>\n    </mdb-form-control>\n  </div>\n    <br>\n  <!--###################### Old Password input field ###################### -->\n  <div class=\"form-outline\">\n    <mdb-form-control  class=\"form-outline\">\n    <input [mdbValidate]=\"true\" mdbInput type=\"password\" id=\"typeOldPassword\"\n           class=\"form-control\" formControlName=\"oldPassword\" required minlength=\"1\" />\n    <label class=\"form-label\" for=\"typeOldPassword\">Current Password</label>\n      <mdb-error *ngIf=\"oldPassword?.invalid && (oldPassword?.dirty || oldPassword?.touched)\">\n        Current password is required\n      </mdb-error>\n      <mdb-success *ngIf=\"oldPassword?.valid && (oldPassword?.dirty || oldPassword?.touched)\">\n        Looks good!\n      </mdb-success>\n    </mdb-form-control>\n    <span class=\"text-danger error-input\" *ngIf=\"submitted && errorFieldSubmitted['oldPassword']\"\n          style=\"white-space: pre-line;  font-size: 14px;\">\n          {{errorFieldSubmitted['oldPassword'] | loginErrorMessage}}\n      <br><br>\n    </span>\n  </div>\n\n    <br>\n    <hr class=\"my-1 text-black-50\">\n    <br>\n\n  <!--###################### New Password input field ###################### -->\n  <div class=\"form-outline text-black-50\">\n    <mdb-form-control  class=\"form-outline\">\n    <input [mdbValidate]=\"true\" mdbInput type=\"password\" id=\"typePassword\"\n           class=\"form-control\" formControlName=\"password\" required minlength=\"3\" />\n    <label mdbLabel class=\"form-label form-white\" for=\"typePassword\">New Password</label>\n    <mdb-error *ngIf=\"password?.invalid && (password?.dirty || password?.touched)\">\n      Password is required\n    </mdb-error>\n    <mdb-success *ngIf=\"password?.valid && (password?.dirty || password?.touched)\">\n      Looks good!\n    </mdb-success>\n    </mdb-form-control>\n    <span class=\"text-danger error-input\" *ngIf=\"submitted && errorFieldSubmitted['password']\"\n          style=\"white-space: pre-line;  font-size: 14px;\">\n          {{errorFieldSubmitted['password'] | apiErrorMessage}}\n      <br><br>\n    </span>\n  </div>\n  <br>\n\n  <!--###################### Confirm Password input field ###################### -->\n  <div class=\"form-outline\">\n    <mdb-form-control  class=\"form-outline\">\n    <input [mdbValidate]=\"true\" mdbInput type=\"password\" id=\"typeConfirmPassword\"\n           class=\"form-control\" formControlName=\"confirmPassword\" required minlength=\"3\" />\n    <label mdbLabel class=\"form-label form-white\" for=\"typeConfirmPassword\">Confirm Password</label>\n      <mdb-error *ngIf=\"confirmPassword?.invalid && (confirmPassword?.dirty || confirmPassword?.touched)\">\n        Retype password is required\n      </mdb-error>\n      <mdb-success *ngIf=\"confirmPassword?.valid && (confirmPassword?.dirty || confirmPassword?.touched)\">\n        Looks good!\n      </mdb-success>\n    </mdb-form-control>\n    <span class=\"text-danger error-input\" *ngIf=\"submitted && errorFieldSubmitted['confirmPassword']\"\n          style=\"white-space: pre-line;  font-size: 14px;\">\n          {{errorFieldSubmitted['confirmPassword'] | apiErrorMessage}}\n      <br><br>\n    </span>\n  </div>\n  </form>\n  </div>\n\n\n  <!--Grid row-->\n  <div  *ngIf=\"!isSuccessful\" class=\"row d-flex align-items-lg-center border-bottom-0 \">\n    <!--Grid column-->\n    <div class=\"text-center mb-2  col-md-12 border-bottom-0\">\n      <button type=\"button\" (click)=\"onSubmit()\" class=\"btn btn-success btn-block btn-rounded z-depth-1 waves-effect waves-light border-bottom-0\"\n      style=\"margin-bottom: 0;\">Replace Password</button>\n    </div>\n  </div>\n  <div hidden class=\"list-group-horizontal mb-4 col-md-12\">\n    <button type=\"button\" class=\" fa-pull-left btn btn-primary\">Save changes</button>\n    <button type=\"button\" class=\"fa-pull-right btn btn-secondary\" (click)=\"modalRef.close()\">Close</button>\n  </div>\n\n</div>\n\n\n\n<div class=\"modal-content \">\n    <div class=\"modal-footer fal\">\n      <input type=\"checkbox\" class=\" form-check-input\" id=\"checkbox7\">\n      <label for=\"checkbox7\" class=\"form-check-label white-text\">Subscribe to our <a href=\"#\" class=\"green-text font-weight-bold\"> newsletter?</a></label>\n  </div>\n</div>\n\n\n"
+            "templateData": "<div class=\"modal-header\">\r\n  <!--div class=\"text-center\"-->\r\n    <label class=\"white-text mb-2 mt-2 font-weight-bold fas\">\r\n      <strong>REPLACE PASSWORD</strong>\r\n      <a class=\"green-text font-weight-bold\">\r\n        <strong> FORM</strong>\r\n      </a>\r\n    </label>\r\n\r\n  <!--/div-->\r\n  <button type=\"button\" class=\"btn btn-close white-text \" aria-label=\"Close\" (click)='modalRef.close(\"xbutton\")'></button>\r\n\r\n  <!--h5 class=\"modal-title\" id=\"exampleModalLabel\">REGISTRATION</h5-->\r\n\r\n</div>\r\n<div class=\"modal-body py-4 text-center expansionCard\">\r\n  <figure class=\"figure\">\r\n  <img aria-setsize=\"20\"  id=\"profile-img\" src=\"../../../AccGate/assets/images/T.png\"\r\n       class=\"profile-img-card img-fluid rounded \"  alt=\"\"/>\r\n    <figcaption class=\"figure-caption text-center text-capitalize\">Tadiran Telecom</figcaption>\r\n  </figure>\r\n  <div class=\"text-white rgba-stylish-strong py-4 px-5 z-depth-2\" style=\"border-bottom: 2rem\">\r\n  <!--div class=\"form-outline\">\r\n    <input type=\"text\" id=\"typeText\" class=\"form-control\" />\r\n    <label  class=\"form-label\" for=\"typeText\">Your UserName</label>\r\n  </div-->\r\n\r\n  <form *ngIf=\"!isSuccessful\" [formGroup]=\"replacePassForm\">\r\n\r\n  <!--###################### Username input field ###################### -->\r\n  <div class=\"form-outline\">\r\n    <mdb-form-control  class=\"form-outline\">\r\n      <input [mdbValidate]=\"true\" mdbInput type=\"text\" id=\"typeText\"\r\n             class=\"form-control\"  formControlName=\"userName\" required />\r\n      <label class=\"form-label \" for=\"typeText\" >Username input</label>\r\n      <mdb-error *ngIf=\"userName?.invalid && (userName?.dirty || userName?.touched)\">\r\n        Username is required\r\n      </mdb-error>\r\n      <mdb-success *ngIf=\"userName?.valid && (userName?.dirty || userName?.touched)\">\r\n        Looks good!\r\n      </mdb-success>\r\n    </mdb-form-control>\r\n  </div>\r\n    <br>\r\n  <!--###################### Old Password input field ###################### -->\r\n  <div class=\"form-outline\">\r\n    <mdb-form-control  class=\"form-outline\">\r\n    <input [mdbValidate]=\"true\" mdbInput type=\"password\" id=\"typeOldPassword\"\r\n           class=\"form-control\" formControlName=\"oldPassword\" required minlength=\"1\" />\r\n    <label class=\"form-label\" for=\"typeOldPassword\">Current Password</label>\r\n      <mdb-error *ngIf=\"oldPassword?.invalid && (oldPassword?.dirty || oldPassword?.touched)\">\r\n        Current password is required\r\n      </mdb-error>\r\n      <mdb-success *ngIf=\"oldPassword?.valid && (oldPassword?.dirty || oldPassword?.touched)\">\r\n        Looks good!\r\n      </mdb-success>\r\n    </mdb-form-control>\r\n    <span class=\"text-danger error-input\" *ngIf=\"submitted && errorFieldSubmitted['oldPassword']\"\r\n          style=\"white-space: pre-line;  font-size: 14px;\">\r\n          {{errorFieldSubmitted['oldPassword'] | loginErrorMessage}}\r\n      <br><br>\r\n    </span>\r\n  </div>\r\n\r\n    <br>\r\n    <hr class=\"my-1 text-black-50\">\r\n    <br>\r\n\r\n  <!--###################### New Password input field ###################### -->\r\n  <div class=\"form-outline text-black-50\">\r\n    <mdb-form-control  class=\"form-outline\">\r\n    <input [mdbValidate]=\"true\" mdbInput type=\"password\" id=\"typePassword\"\r\n           class=\"form-control\" formControlName=\"password\" required minlength=\"3\" />\r\n    <label mdbLabel class=\"form-label form-white\" for=\"typePassword\">New Password</label>\r\n    <mdb-error *ngIf=\"password?.invalid && (password?.dirty || password?.touched)\">\r\n      Password is required\r\n    </mdb-error>\r\n    <mdb-success *ngIf=\"password?.valid && (password?.dirty || password?.touched)\">\r\n      Looks good!\r\n    </mdb-success>\r\n    </mdb-form-control>\r\n    <span class=\"text-danger error-input\" *ngIf=\"submitted && errorFieldSubmitted['password']\"\r\n          style=\"white-space: pre-line;  font-size: 14px;\">\r\n          {{errorFieldSubmitted['password'] | apiErrorMessage}}\r\n      <br><br>\r\n    </span>\r\n  </div>\r\n  <br>\r\n\r\n  <!--###################### Confirm Password input field ###################### -->\r\n  <div class=\"form-outline\">\r\n    <mdb-form-control  class=\"form-outline\">\r\n    <input [mdbValidate]=\"true\" mdbInput type=\"password\" id=\"typeConfirmPassword\"\r\n           class=\"form-control\" formControlName=\"confirmPassword\" required minlength=\"3\" />\r\n    <label mdbLabel class=\"form-label form-white\" for=\"typeConfirmPassword\">Confirm Password</label>\r\n      <mdb-error *ngIf=\"confirmPassword?.invalid && (confirmPassword?.dirty || confirmPassword?.touched)\">\r\n        Retype password is required\r\n      </mdb-error>\r\n      <mdb-success *ngIf=\"confirmPassword?.valid && (confirmPassword?.dirty || confirmPassword?.touched)\">\r\n        Looks good!\r\n      </mdb-success>\r\n    </mdb-form-control>\r\n    <span class=\"text-danger error-input\" *ngIf=\"submitted && errorFieldSubmitted['confirmPassword']\"\r\n          style=\"white-space: pre-line;  font-size: 14px;\">\r\n          {{errorFieldSubmitted['confirmPassword'] | apiErrorMessage}}\r\n      <br><br>\r\n    </span>\r\n  </div>\r\n  </form>\r\n  </div>\r\n\r\n\r\n  <!--Grid row-->\r\n  <div  *ngIf=\"!isSuccessful\" class=\"row d-flex align-items-lg-center border-bottom-0 \">\r\n    <!--Grid column-->\r\n    <div class=\"text-center mb-2  col-md-12 border-bottom-0\">\r\n      <button type=\"button\" (click)=\"onSubmit()\" class=\"btn btn-success btn-block btn-rounded z-depth-1 waves-effect waves-light border-bottom-0\"\r\n      style=\"margin-bottom: 0;\">Replace Password</button>\r\n    </div>\r\n  </div>\r\n  <div hidden class=\"list-group-horizontal mb-4 col-md-12\">\r\n    <button type=\"button\" class=\" fa-pull-left btn btn-primary\">Save changes</button>\r\n    <button type=\"button\" class=\"fa-pull-right btn btn-secondary\" (click)=\"modalRef.close()\">Close</button>\r\n  </div>\r\n\r\n</div>\r\n\r\n\r\n\r\n<div class=\"modal-content \">\r\n    <div class=\"modal-footer fal\">\r\n      <input type=\"checkbox\" class=\" form-check-input\" id=\"checkbox7\">\r\n      <label for=\"checkbox7\" class=\"form-check-label white-text\">Subscribe to our <a href=\"#\" class=\"green-text font-weight-bold\"> newsletter?</a></label>\r\n  </div>\r\n</div>\r\n\r\n\r\n"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-d1a9118a3b157879384337fd33a15537d7975005e9f4b1629da97f07825b0fe8cba38b8abad7152ba70428b9a923bafb62a9863d23c28f373f14582475c8d8d7",
+            "id": "module-AppModule-f3aa24551974f180e923f2d7c7f7a9da71e8252ed1b4639b8a67772e9b05556ccb2e3ce33feca9a279f8542262959f6f6739fe402fd28965350ed2e222c87d01",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport {FormsModule, ReactiveFormsModule} from '@angular/forms';\r\nimport { HttpClientModule } from '@angular/common/http';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { LoginComponent } from './login/login.component';\r\nimport { RegisterComponent } from './register/register.component';\r\nimport { HomeComponent } from './home/home.component';\r\nimport { ProfileComponent } from './profile/profile.component';\r\nimport { BoardAdminComponent } from './board-admin/board-admin.component';\r\nimport { BoardModeratorComponent } from './board-moderator/board-moderator.component';\r\nimport { BoardUserComponent } from './board-user/board-user.component';\r\n\r\nimport { authInterceptorProviders, AuthInterceptor } from './_helpers/auth.interceptor';\r\nimport {NgbDatepickerModule} from \"@ng-bootstrap/ng-bootstrap\";\r\nimport { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';\r\nimport { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';\r\nimport { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';\r\nimport { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';\r\nimport { MdbDropdownModule } from 'mdb-angular-ui-kit/dropdown';\r\nimport { MdbFormsModule } from 'mdb-angular-ui-kit/forms';\r\nimport { MdbModalModule } from 'mdb-angular-ui-kit/modal';\r\nimport { MdbPopoverModule } from 'mdb-angular-ui-kit/popover';\r\nimport { MdbRadioModule } from 'mdb-angular-ui-kit/radio';\r\nimport { MdbRangeModule } from 'mdb-angular-ui-kit/range';\r\nimport { MdbRippleModule } from 'mdb-angular-ui-kit/ripple';\r\nimport { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';\r\nimport { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';\r\nimport { MdbModalRef } from 'mdb-angular-ui-kit/modal';\r\nimport { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';\r\nimport { MdbValidationModule, MdbErrorDirective, MdbSuccessDirective } from 'mdb-angular-ui-kit/validation';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { MdbInputDirective  } from 'mdb-angular-ui-kit/forms';\r\nimport { ModalModule, TooltipModule, PopoverModule, ButtonsModule, MDBBootstrapModule } from 'angular-bootstrap-md';\r\nimport { RegisterFormComponent } from './login/register-form/register-form.component';\r\nimport {ReplacePassFormComponent} from \"./login/replace-pass-form/replace-pass-form.component\";\r\nimport {ApiErrorMessagePipe} from \"./pipes/api-error-message.pipe\";\r\nimport {LoginErrorMessagePipe} from \"./pipes/login-error-message.pipe\";\r\nimport { ButtonComponent } from \"./login/button/button.component\";\r\nimport { Button2Component } from \"./login/button2/button2.component\";\r\nimport  Page2Component  from './page/page.component';\r\n//import  HeaderComponent  from './page/header.component';\r\nimport { Button3Component } from './login/button3/button3.component';\r\n\r\n\r\n@NgModule({\r\n    declarations: [\r\n        AppComponent,\r\n        LoginComponent,\r\n        RegisterComponent,\r\n        HomeComponent,\r\n        ProfileComponent,\r\n        BoardAdminComponent,\r\n        BoardModeratorComponent,\r\n        BoardUserComponent,\r\n        RegisterFormComponent,\r\n        ReplacePassFormComponent,\r\n        ApiErrorMessagePipe,\r\n        LoginErrorMessagePipe,\r\n        ButtonComponent,\r\n        Button2Component,\r\n      Page2Component,\r\n      //  HeaderComponent,\r\n        Button3Component\r\n    ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    FormsModule,\r\n    HttpClientModule,\r\n    NgbDatepickerModule,\r\n    MdbAccordionModule,\r\n    MdbCarouselModule,\r\n    MdbCheckboxModule,\r\n    MdbCollapseModule,\r\n    MdbDropdownModule,\r\n    MdbFormsModule,\r\n    MdbModalModule,\r\n    MdbPopoverModule,\r\n    MdbRadioModule,\r\n    MdbRangeModule,\r\n    MdbRippleModule,\r\n    MdbScrollspyModule,\r\n    MdbTabsModule,\r\n    MdbTooltipModule,\r\n    //MdbValidationModule,\r\n    BrowserAnimationsModule,\r\n    ReactiveFormsModule,\r\n    ModalModule,\r\n    ButtonsModule,\r\n    MDBBootstrapModule.forRoot(),\r\n\r\n  ],\r\n  providers: [authInterceptorProviders],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport {FormsModule, ReactiveFormsModule} from '@angular/forms';\r\nimport { HttpClientModule } from '@angular/common/http';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { LoginComponent } from './login/login.component';\r\nimport { RegisterComponent } from './register/register.component';\r\nimport { HomeComponent } from './home/home.component';\r\nimport { ProfileComponent } from './profile/profile.component';\r\nimport { BoardAdminComponent } from './board-admin/board-admin.component';\r\nimport { BoardModeratorComponent } from './board-moderator/board-moderator.component';\r\nimport { BoardUserComponent } from './board-user/board-user.component';\r\n\r\nimport { authInterceptorProviders, AuthInterceptor } from './_helpers/auth.interceptor';\r\nimport {NgbDatepickerModule} from \"@ng-bootstrap/ng-bootstrap\";\r\nimport { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';\r\nimport { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';\r\nimport { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';\r\nimport { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';\r\nimport { MdbDropdownModule } from 'mdb-angular-ui-kit/dropdown';\r\nimport { MdbFormsModule } from 'mdb-angular-ui-kit/forms';\r\nimport { MdbModalModule } from 'mdb-angular-ui-kit/modal';\r\nimport { MdbPopoverModule } from 'mdb-angular-ui-kit/popover';\r\nimport { MdbRadioModule } from 'mdb-angular-ui-kit/radio';\r\nimport { MdbRangeModule } from 'mdb-angular-ui-kit/range';\r\nimport { MdbRippleModule } from 'mdb-angular-ui-kit/ripple';\r\nimport { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';\r\nimport { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';\r\nimport { MdbModalRef } from 'mdb-angular-ui-kit/modal';\r\nimport { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';\r\nimport { MdbValidationModule, MdbErrorDirective, MdbSuccessDirective } from 'mdb-angular-ui-kit/validation';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { MdbInputDirective  } from 'mdb-angular-ui-kit/forms';\r\nimport { ModalModule, TooltipModule, PopoverModule, ButtonsModule, MDBBootstrapModule } from 'angular-bootstrap-md';\r\nimport { RegisterFormComponent } from './login/register-form/register-form.component';\r\nimport {ReplacePassFormComponent} from \"./login/replace-pass-form/replace-pass-form.component\";\r\nimport {ApiErrorMessagePipe} from \"./pipes/api-error-message.pipe\";\r\nimport {LoginErrorMessagePipe} from \"./pipes/login-error-message.pipe\";\r\nimport { ButtonComponent } from \"./login/button/button.component\";\r\nimport { Button2Component } from \"./login/button2/button2.component\";\r\nimport  Page2Component  from './page/page.component';\r\n//import  HeaderComponent  from './page/header.component';\r\nimport { Button3Component } from './login/button3/button3.component';\r\nimport { LanguageIconComponent } from './page/language-icon/language-icon.component';\r\n\r\n\r\n@NgModule({\r\n    declarations: [\r\n        AppComponent,\r\n        LoginComponent,\r\n        RegisterComponent,\r\n        HomeComponent,\r\n        ProfileComponent,\r\n        BoardAdminComponent,\r\n        BoardModeratorComponent,\r\n        BoardUserComponent,\r\n        RegisterFormComponent,\r\n        ReplacePassFormComponent,\r\n        ApiErrorMessagePipe,\r\n        LoginErrorMessagePipe,\r\n        ButtonComponent,\r\n        Button2Component,\r\n      Page2Component,\r\n      //  HeaderComponent,\r\n        Button3Component,\r\n      LanguageIconComponent\r\n    ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    FormsModule,\r\n    HttpClientModule,\r\n    NgbDatepickerModule,\r\n    MdbAccordionModule,\r\n    MdbCarouselModule,\r\n    MdbCheckboxModule,\r\n    MdbCollapseModule,\r\n    MdbDropdownModule,\r\n    MdbFormsModule,\r\n    MdbModalModule,\r\n    MdbPopoverModule,\r\n    MdbRadioModule,\r\n    MdbRangeModule,\r\n    MdbRippleModule,\r\n    MdbScrollspyModule,\r\n    MdbTabsModule,\r\n    MdbTooltipModule,\r\n    //MdbValidationModule,\r\n    BrowserAnimationsModule,\r\n    ReactiveFormsModule,\r\n    ModalModule,\r\n    ButtonsModule,\r\n    MDBBootstrapModule.forRoot(),\r\n\r\n  ],\r\n  providers: [authInterceptorProviders],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -4257,6 +4402,9 @@
                         },
                         {
                             "name": "HomeComponent"
+                        },
+                        {
+                            "name": "LanguageIconComponent"
                         },
                         {
                             "name": "LoginComponent"
@@ -4374,7 +4522,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\n  accServer: {\n    ACCWEBServers: AUTH_API //'https://172.28.8.245:8445'\n  },\n  endpoints: {\n\n    TOKEN_KEY: 'token',\n    REFRESHTOKEN_KEY: 'auth-refreshtoken',\n    USER_KEY: 'user'\n  }\n}"
+                "defaultValue": "{\r\n  accServer: {\r\n    ACCWEBServers: AUTH_API //'https://172.28.8.245:8445'\r\n  },\r\n  endpoints: {\r\n\r\n    TOKEN_KEY: 'token',\r\n    REFRESHTOKEN_KEY: 'auth-refreshtoken',\r\n    USER_KEY: 'user'\r\n  }\r\n}"
             },
             {
                 "name": "AUTH_API",
@@ -4420,21 +4568,21 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.prod.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\r\n  production: true\r\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/environments/environment.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\r\n  production: false\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  production: true\r\n}"
             },
             {
                 "name": "httpOptions",
@@ -4460,7 +4608,7 @@
                 "name": "Large",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/login/button3/button3.stories.ts",
+                "file": "src/app/page/language-icon/language-icon.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4471,6 +4619,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/app/login/button2/button2.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Large",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/login/button3/button3.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4620,7 +4778,7 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/login/button3/button3.stories.ts",
+                "file": "src/app/page/language-icon/language-icon.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4631,6 +4789,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/app/login/button2/button2.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/login/button3/button3.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4689,7 +4857,7 @@
                 "name": "Secondary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/login/button3/button3.stories.ts",
+                "file": "src/app/page/language-icon/language-icon.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4700,6 +4868,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/app/login/button2/button2.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/login/button3/button3.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4729,7 +4907,7 @@
                 "name": "Small",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/login/button3/button3.stories.ts",
+                "file": "src/app/page/language-icon/language-icon.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4740,6 +4918,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/app/login/button2/button2.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Small",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/login/button3/button3.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4763,7 +4951,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Button>",
-                "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+                "defaultValue": "(args: Button) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -4773,7 +4961,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Header>",
-                "defaultValue": "(args: Header) => ({\n  props: args,\n})"
+                "defaultValue": "(args: Header) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -4783,7 +4971,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Header2>",
-                "defaultValue": "(args: Header2) => ({\n  props: args,\n})"
+                "defaultValue": "(args: Header2) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -4793,7 +4981,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Page>",
-                "defaultValue": "(args: Page) => ({\n  props: args,\n})"
+                "defaultValue": "(args: Page) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -4803,7 +4991,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<BoardUserComponent>",
-                "defaultValue": "(args: BoardUserComponent) => ({\n  props: args,\n})"
+                "defaultValue": "(args: BoardUserComponent) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -4813,17 +5001,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "(args) => ({\n  props: args,\n})"
+                "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/login/button3/button3.stories.ts",
+                "file": "src/app/page/language-icon/language-icon.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<Button3Component>",
-                "defaultValue": "(args: Button3Component) => ({\n  props: args,\n})"
+                "type": "Story<LanguageIconComponent>",
+                "defaultValue": "(args: LanguageIconComponent) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -4833,7 +5021,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Button2Component>",
-                "defaultValue": "(args: Button2Component) => ({\n  props: args,\n})"
+                "defaultValue": "(args: Button2Component) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/login/button3/button3.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Button3Component>",
+                "defaultValue": "(args: Button3Component) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -4843,7 +5041,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<ButtonComponent>",
-                "defaultValue": "(args: ButtonComponent) => ({\n  props: args,\n})"
+                "defaultValue": "(args: ButtonComponent) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "TOKEN_HEADER_KEY",
@@ -4921,7 +5119,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\n  accServer: {\n    ACCWEBServers: AUTH_API //'https://172.28.8.245:8445'\n  },\n  endpoints: {\n\n    TOKEN_KEY: 'token',\n    REFRESHTOKEN_KEY: 'auth-refreshtoken',\n    USER_KEY: 'user'\n  }\n}"
+                    "defaultValue": "{\r\n  accServer: {\r\n    ACCWEBServers: AUTH_API //'https://172.28.8.245:8445'\r\n  },\r\n  endpoints: {\r\n\r\n    TOKEN_KEY: 'token',\r\n    REFRESHTOKEN_KEY: 'auth-refreshtoken',\r\n    USER_KEY: 'user'\r\n  }\r\n}"
                 },
                 {
                     "name": "AUTH_API",
@@ -5039,18 +5237,6 @@
                     "type": "literal type"
                 }
             ],
-            "src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.prod.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\r\n  production: true\r\n}"
-                }
-            ],
             "src/environments/environment.ts": [
                 {
                     "name": "environment",
@@ -5061,6 +5247,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\r\n  production: false\r\n}"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: true\r\n}"
                 }
             ],
             "src/stories/Button.stories.ts": [
@@ -5112,15 +5310,15 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<Button>",
-                    "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+                    "defaultValue": "(args: Button) => ({\r\n  props: args,\r\n})"
                 }
             ],
-            "src/app/login/button3/button3.stories.ts": [
+            "src/app/page/language-icon/language-icon.stories.ts": [
                 {
                     "name": "Large",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/login/button3/button3.stories.ts",
+                    "file": "src/app/page/language-icon/language-icon.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -5130,7 +5328,7 @@
                     "name": "Primary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/login/button3/button3.stories.ts",
+                    "file": "src/app/page/language-icon/language-icon.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -5140,7 +5338,7 @@
                     "name": "Secondary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/login/button3/button3.stories.ts",
+                    "file": "src/app/page/language-icon/language-icon.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -5150,7 +5348,7 @@
                     "name": "Small",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/login/button3/button3.stories.ts",
+                    "file": "src/app/page/language-icon/language-icon.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -5160,11 +5358,11 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/login/button3/button3.stories.ts",
+                    "file": "src/app/page/language-icon/language-icon.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<Button3Component>",
-                    "defaultValue": "(args: Button3Component) => ({\n  props: args,\n})"
+                    "type": "Story<LanguageIconComponent>",
+                    "defaultValue": "(args: LanguageIconComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
             "src/app/login/button2/button2.stories.ts": [
@@ -5216,7 +5414,59 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<Button2Component>",
-                    "defaultValue": "(args: Button2Component) => ({\n  props: args,\n})"
+                    "defaultValue": "(args: Button2Component) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/app/login/button3/button3.stories.ts": [
+                {
+                    "name": "Large",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/login/button3/button3.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/login/button3/button3.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/login/button3/button3.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Small",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/login/button3/button3.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/login/button3/button3.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Button3Component>",
+                    "defaultValue": "(args: Button3Component) => ({\r\n  props: args,\r\n})"
                 }
             ],
             "src/app/login/button/button.stories.ts": [
@@ -5268,7 +5518,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<ButtonComponent>",
-                    "defaultValue": "(args: ButtonComponent) => ({\n  props: args,\n})"
+                    "defaultValue": "(args: ButtonComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
             "src/stories/Header.stories.ts": [
@@ -5300,7 +5550,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<Header>",
-                    "defaultValue": "(args: Header) => ({\n  props: args,\n})"
+                    "defaultValue": "(args: Header) => ({\r\n  props: args,\r\n})"
                 }
             ],
             "src/stories/Header2.stories.ts": [
@@ -5332,7 +5582,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<Header2>",
-                    "defaultValue": "(args: Header2) => ({\n  props: args,\n})"
+                    "defaultValue": "(args: Header2) => ({\r\n  props: args,\r\n})"
                 }
             ],
             "src/stories/Page.stories.ts": [
@@ -5364,7 +5614,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<Page>",
-                    "defaultValue": "(args: Page) => ({\n  props: args,\n})"
+                    "defaultValue": "(args: Page) => ({\r\n  props: args,\r\n})"
                 }
             ],
             "src/app/board-user/board-user.stories.ts": [
@@ -5396,7 +5646,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<BoardUserComponent>",
-                    "defaultValue": "(args: BoardUserComponent) => ({\n  props: args,\n})"
+                    "defaultValue": "(args: BoardUserComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
             "src/app/page/page.stories.ts": [
@@ -5428,7 +5678,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "(args) => ({\n  props: args,\n})"
+                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
                 }
             ],
             "src/app/_services/token-storage.service.ts": [
@@ -6038,6 +6288,65 @@
                 "name": "ReplacePassFormComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/14",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/page/language-icon/language-icon.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "LanguageIconComponent",
+                "coveragePercent": 62,
+                "coverageCount": "5/8",
+                "status": "good"
+            },
+            {
+                "filePath": "src/app/page/language-icon/language-icon.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Large",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/page/language-icon/language-icon.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/page/language-icon/language-icon.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/page/language-icon/language-icon.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/page/language-icon/language-icon.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {

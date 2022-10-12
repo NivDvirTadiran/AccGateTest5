@@ -23,18 +23,6 @@
   <component name="SvnBranchConfigurationManager">
     <option name="myConfigurationMap">
       <map>
-        <entry key="$PROJECT_DIR$/../../../ACCMain_7.4">
-          <value>
-            <SvnBranchConfiguration>
-              <option name="branchUrls">
-                <list>
-                  <option value="svn://tadiran845:3695/acc_repository/branches" />
-                </list>
-              </option>
-              <option name="trunkUrl" value="svn://tadiran845:3695/acc_repository/trunk" />
-            </SvnBranchConfiguration>
-          </value>
-        </entry>
         <entry key="$PROJECT_DIR$/../..">
           <value>
             <SvnBranchConfiguration>

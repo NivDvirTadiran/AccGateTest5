@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AccGateBackend/AccGateBackend.iml" filepath="$PROJECT_DIR$/AccGateBackend/AccGateBackend.iml" />
       <module fileurl="file://$PROJECT_DIR$/AccGateFrontend/AccGateFrontend.iml" filepath="$PROJECT_DIR$/AccGateFrontend/AccGateFrontend.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/accGate.iml" filepath="$PROJECT_DIR$/.idea/accGate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AccGateBackend/accGate.iml" filepath="$PROJECT_DIR$/AccGateBackend/accGate.iml" />
     </modules>
   </component>
 </project>
