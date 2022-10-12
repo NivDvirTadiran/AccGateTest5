@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="accgateapi">
+    <output-path>$PROJECT_DIR$/out/artifacts/accgateapi</output-path>
+    <root id="root">
+      <element id="dir-copy" path="$PROJECT_DIR$/AccGateBackend/target/AccGate-0.0.1" />
+    </root>
+  </artifact>
+</component>

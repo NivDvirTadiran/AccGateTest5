@@ -1,0 +1,65 @@
+._1Q9if, ._2Hij5 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: start;
+  pointer-events: none;
+}
+
+._3SQN-, ._3wnIc {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.multi-bg-example {
+  width: 980px;
+  height: 289px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.font_0 {
+  font-size:44px;
+  text-align:left;
+  color:#FFFFFF;
+}
+
+.alert, .alert-success {
+  width: 48%;
+}
+
+
+.background {
+  background-size: cover;
+  background-origin: border-box;
+  background-image: url(../_services/assets/images/Background.webp);
+  /*linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));*/
+  background-repeat: no-repeat;
+  background-position: top left;
+
+}
+
+.bg-image {
+  background-image: url(../_services/assets/images/contact-center.jpg);
+  background-position: top right;
+  padding-bottom: 100px;
+}
+
+aside {
+  width: 48%;
+  padding-left: .1rem;
+  margin-left: .1rem;
+  float: right;
+  box-shadow: inset 5px 0 5px -5px #29627e;
+  font-style: italic;
+  color: #29627e;
+
+}
+aside > p {
+  margin: .20rem;
+}
+
+p {
+  font-family: 'Fira Sans', sans-serif;
+}

@@ -1,0 +1,109 @@
+
+
+.fa,.fab,.fad,.fal,.far,.fas {
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  display:inline-block;
+  font-style:normal;
+  font-variant:normal;
+  text-rendering:auto;line-height:1
+}
+
+.fa-lg {
+  font-size:1.33333em;
+  line-height:.75em;
+  vertical-align:-.0667em
+}
+/**/
+.fa-xs {font-size:.75em}
+
+.fa-sm {font-size:.875em}
+
+.fa-1x {font-size:1em}
+
+.fa-2x {font-size:2em}
+
+.fa-3x {font-size:3em}
+
+.fa-4x {font-size:4em}
+
+.fa-5x {font-size:5em}
+
+.fa-6x {font-size:6em}
+
+.fa-7x {font-size:7em}
+
+.fa-8x {font-size:8em}
+
+.fa-9x {font-size:9em}
+
+.fa-10x {font-size:10em}
+
+.fa-fw {text-align:center;width:1.25em}
+
+.fa-ul {list-style-type:none;margin-left:2.5em;padding-left:0}
+
+.fa-ul>li {position:relative}
+
+.fa-li {left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}
+
+.fa-border {border:.08em solid #eee;border-radius:.1em;padding:.2em .25em .15em}
+
+.fa-pull-left {float:left}
+
+.fa-pull-right {float:right}
+
+.fa.fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left {
+  margin-right:.3em
+}
+
+.input-with-pre-icon label {left:36px;right:initial}
+
+
+.fa.fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right {
+  margin-left:.3em
+}
+
+.fa-spin {
+  -webkit-animation:fa-spin 2s linear infinite;
+  animation:fa-spin 2s linear infinite
+}
+
+
+
+.fa,.far,.fas {
+  font-family: "Font Awesome 5 Free", serif
+}
+
+.fa,.fas {
+  font-weight:900
+}
+
+
+.v-btn__content {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: inherit;
+  line-height: normal;
+  position: relative;
+  transition: inherit;
+}
+
+.form-outline .form-control:focus ~ .form-label, .form-outline .form-control.active ~ .form-label {
+  transform: translateY(-1.5rem) translateY(0.1rem) scale(0.8);
+}
+
+
+/*
+.form-outline .form-control ~ .form-notch div {
+  pointer-events: none;
+  border: 1px solid;
+  border-color: #39c0ed;
+}
+
+*/
+.v-btn__content {
+  letter-spacing: normal;
+}

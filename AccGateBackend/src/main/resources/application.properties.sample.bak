@@ -1,0 +1,29 @@
+tadiran.gate.ACCServerAddress1= %ACC_IP1%
+tadiran.gate.ACCServerAddress2= %ACC_IP2%
+tadiran.gate.accVersion= %ACC_VERSION%
+spring.mvc.view.prefix=/
+spring.mvc.view.suffix=.html
+spring.mvc.servlet.load-on-startup=1
+spring.datasource.url= jdbc:mysql://localhost:3308/ecc?useSSL=true
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.username= ecc
+spring.datasource.password= !A_C_C-c0d8
+
+spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.MySQL5InnoDBDialect
+spring.jpa.hibernate.ddl-auto=none
+
+# Spring Datasource, Spring Data...
+# App Properties
+tadiran.gate.jwtSecret= e1996-secret-key
+# 360,000[Ms] = 6[min]
+#bezkoder.app.jwtExpirationMs= 360000
+# 8,640,000[Ms] = 144[min] = 2.4[hour]
+#bezkoder.app.jwtRefreshExpirationMs= 8640000
+
+## For test
+# 60,000[Ms] = 1[min]
+tadiran.gate.jwtExpirationMs= 60000
+# 120,000[Ms] = 2[min] = 0.033[hour]
+tadiran.gate.jwtRefreshExpirationMs= 240000
+
+server.port=8445

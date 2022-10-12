@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="AccGate">
+    <output-path>$PROJECT_DIR$/out/artifacts/AccGate</output-path>
+    <properties id="ant-postprocessing">
+      <options enabled="true" />
+    </properties>
+    <root id="root">
+      <element id="dir-copy" path="$PROJECT_DIR$/AccGateBackend/target/AccGate-0.0.1" />
+    </root>
+  </artifact>
+</component>

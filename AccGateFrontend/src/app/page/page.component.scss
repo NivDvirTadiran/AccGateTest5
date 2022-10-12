@@ -1,0 +1,50 @@
+
+.Desktop-1Login-1 {
+  width: 1920px;
+  height: 1080px;
+  background: linear-gradient(228.37deg, #EFF8FF 22.25%, #B0DCFF 88.18%);
+}
+div.relative {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+}
+
+div.absolute {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 100px;
+}
+
+
+.Frame-1 {
+  width: 1920px;
+  height: 1080px;
+  flex-grow: 0;
+}
+
+.fa-pull-left {float:left}
+
+.fa-pull-right {float:right}
+
+img.icon-1 {
+  position: absolute;
+  width: 305.7px;
+  height: 309px;
+  transform: rotate(0deg);
+  background-position: bottom;
+}
+
+img.icon-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 394px;
+  height: 402px;
+  flex-grow: 0;
+}
+
+
+

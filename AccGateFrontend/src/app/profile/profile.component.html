@@ -1,0 +1,101 @@
+<div class="container" *ngIf="currentUser; else loggedOut">
+  <br>
+  <header class="background jumbotron">
+    <h3 class="font_0" id="profile_title">
+      {{ currentUser.username }} Profile
+    </h3>
+  </header>
+  <p>
+    <strong>accessToken:</strong>
+    <!--{{ currentUser.accessToken.substring(0, 20) }} ...
+    {{ currentUser.accessToken.substr(currentUser.accessToken.length - 20) }}-->
+    {{ accessToken }}
+  </p>
+  <p>
+    <strong>refreshToken:</strong>
+    {{ refreshToken }}
+    <br>
+    <button id="forseRefreshToken" (click)="forseRefreshToken()" style='text-align: left; width:auto;cursor: pointer;'>Refresh</button>
+    <br>
+    <button id="openNewGccsTab" (click)='openNewTabForApp("GCCS","/accGCCS/")' style='text-align: left; width:auto;cursor: pointer;'>Open new tab for GCCS</button>
+    <br>
+    <button id="openNewAgentTab" (click)='openNewWinForApp("AGENT","/accAgent/")' style='text-align: left; width:auto;cursor: pointer;'>Open new tab for Agent</button>
+    <br>
+    <button id="openNewWebRTTab" (click)='openNewTabForApp("ACCREALTIME","/accRealTime/")' style='text-align: left; width:auto;cursor: pointer;'>Open new tab for WebRT</button>
+  </p>
+  <p>
+    <strong>Email:</strong>
+    {{ currentUser.email }}
+  </p>
+  <p>
+    <strong>ID:</strong>
+    {{ currentUser.id }}
+  </p>
+  <p>
+    <strong>Web App:</strong>
+    {{ currentUser.webApp }}
+  </p>
+  <strong>Roles:</strong>
+  <ul>
+    <li *ngFor="let role of currentUser.roles">
+      {{ role }}
+    </li>
+  </ul>
+  <p><a href="http://tadiran2014.azurewebsites.net/en/products/unified-communications/aeonix/" id="testid2" target="iframe_a">Tadiran Azure</a></p>
+  <p><a href="https://www.tadirantele.com/aeonix4cloud" id="testid4" target="iframe_a">aeonix4cloud</a></p>
+  <iframe src="https://www.tadirantele.com/aeonix4cloud" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"  name="iframe_a" height="550px" width="100%" title="Iframe Example">
+  </iframe>
+  <ul class="list-unstyled">
+    <li class="media">
+      <a href="https://172.28.8.245:8443/aeonix/mainForm.jsf" class="app-icon-wide"  target="_blank" aria-current="true">
+        <img class="" src="../../AccGate/assets/images/aeonix_logo_72.png" alt="Icon app number 1">
+      </a>
+      <div class="media-body">
+        <h5 class="mt-0 mb-1">aeonix - SERVER</h5>
+        Aeonix is a software only communications solution that consolidates disparate business applications into a single, fault tolerant platform. The Aeonix Unified Communications platform, Aeonix Contact Center(ACC), and Aeonix Dispatch Console (ADC), all reside in one virtual instance or COTS server. Aeonix runs on any virtualization platform including VMware, Hyper-V and cloud platforms such as AWS, and can easily port from one platform to another.
+      </div>
+    </li>
+    <li class="media my-4">
+      <button (click)="openapp()" class="app-icon" >
+        <img class="app-icon" src="../../AccGate/assets/images/dashboard.png" alt="Icon app number 2" >
+      </button>
+      <!--a href="https://172.28.1.130:8445/accRealTime/index.jsp" class="app-icon" rel="opener" aria-current="true"></a-->
+      <div class="media-body">
+        <h5 class="mt-0 mb-1">AccGCCS - SERVER</h5>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+      </div>
+    </li>
+    <li class="media">
+      <a href="https://localhost:8445/accGCCS/" id="testid3" target="iframe_a" rel="noopener" aria-current="false">
+      <img class="app-icon" src="../../AccGate/assets/images/management.png" alt="Icon app number 3">
+      </a>
+      <div class="media-body">
+        <h5 class="mt-0 mb-1">AccGCCS - LOCAL</h5>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+      </div>
+    </li>
+    <li class="media my-4">
+      <a href="http://localhost:8080/accWebRT/" id="testid5" target="iframe_a" rel="noopener" aria-current="false">
+        <img class="app-icon" src="../../AccGate/assets/images/dashboard.png" alt="Icon app number 4" >
+      </a>
+
+      <div class="media-body">
+        <h5 class="mt-0 mb-1">AccWebRT - LOCAL</h5>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+      </div>
+    </li>
+    <li class="media">
+      <a href="https://172.28.8.245:8445/accAgent/" id="testid6" target="iframe_a" rel="noopener" aria-current="false">
+        <img class="app-icon" src="../../AccGate/assets/images/management.png" alt="Icon app number 5">
+      </a>
+      <div class="media-body">
+        <h5 class="mt-0 mb-1">AccAgent - SERVER</h5>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+      </div>
+    </li>
+  </ul>
+</div>
+
+<ng-template #loggedOut>
+  Please login.
+</ng-template>

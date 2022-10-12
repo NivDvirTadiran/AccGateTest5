@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="d8c3be97-e97b-4ae0-8672-66e0833fec97" name="ecc@172.28.8.245 Mapping">
+      <data-sources db="8fc55085-e32e-42a0-86a8-3fc869152866" />
+      <scope>
+        <node negative="1">
+          <node kind="database" negative="1">
+            <node kind="schema" negative="1" />
+          </node>
+          <node kind="schema">
+            <name qname="c2g" />
+            <name qname="ecc" />
+            <name qname="information_schema" />
+          </node>
+        </node>
+      </scope>
+    </mapping>
+  </component>
+</project>

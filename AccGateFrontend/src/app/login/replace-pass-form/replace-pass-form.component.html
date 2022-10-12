@@ -1,0 +1,137 @@
+<div class="modal-header">
+  <!--div class="text-center"-->
+    <label class="white-text mb-2 mt-2 font-weight-bold fas">
+      <strong>REPLACE PASSWORD</strong>
+      <a class="green-text font-weight-bold">
+        <strong> FORM</strong>
+      </a>
+    </label>
+
+  <!--/div-->
+  <button type="button" class="btn btn-close white-text " aria-label="Close" (click)='modalRef.close("xbutton")'></button>
+
+  <!--h5 class="modal-title" id="exampleModalLabel">REGISTRATION</h5-->
+
+</div>
+<div class="modal-body py-4 text-center expansionCard">
+  <figure class="figure">
+  <img aria-setsize="20"  id="profile-img" src="../../../AccGate/assets/images/T.png"
+       class="profile-img-card img-fluid rounded "  alt=""/>
+    <figcaption class="figure-caption text-center text-capitalize">Tadiran Telecom</figcaption>
+  </figure>
+  <div class="text-white rgba-stylish-strong py-4 px-5 z-depth-2" style="border-bottom: 2rem">
+  <!--div class="form-outline">
+    <input type="text" id="typeText" class="form-control" />
+    <label  class="form-label" for="typeText">Your UserName</label>
+  </div-->
+
+  <form *ngIf="!isSuccessful" [formGroup]="replacePassForm">
+
+  <!--###################### Username input field ###################### -->
+  <div class="form-outline">
+    <mdb-form-control  class="form-outline">
+      <input [mdbValidate]="true" mdbInput type="text" id="typeText"
+             class="form-control"  formControlName="userName" required />
+      <label class="form-label " for="typeText" >Username input</label>
+      <mdb-error *ngIf="userName?.invalid && (userName?.dirty || userName?.touched)">
+        Username is required
+      </mdb-error>
+      <mdb-success *ngIf="userName?.valid && (userName?.dirty || userName?.touched)">
+        Looks good!
+      </mdb-success>
+    </mdb-form-control>
+  </div>
+    <br>
+  <!--###################### Old Password input field ###################### -->
+  <div class="form-outline">
+    <mdb-form-control  class="form-outline">
+    <input [mdbValidate]="true" mdbInput type="password" id="typeOldPassword"
+           class="form-control" formControlName="oldPassword" required minlength="1" />
+    <label class="form-label" for="typeOldPassword">Current Password</label>
+      <mdb-error *ngIf="oldPassword?.invalid && (oldPassword?.dirty || oldPassword?.touched)">
+        Current password is required
+      </mdb-error>
+      <mdb-success *ngIf="oldPassword?.valid && (oldPassword?.dirty || oldPassword?.touched)">
+        Looks good!
+      </mdb-success>
+    </mdb-form-control>
+    <span class="text-danger error-input" *ngIf="submitted && errorFieldSubmitted['oldPassword']"
+          style="white-space: pre-line;  font-size: 14px;">
+          {{errorFieldSubmitted['oldPassword'] | loginErrorMessage}}
+      <br><br>
+    </span>
+  </div>
+
+    <br>
+    <hr class="my-1 text-black-50">
+    <br>
+
+  <!--###################### New Password input field ###################### -->
+  <div class="form-outline text-black-50">
+    <mdb-form-control  class="form-outline">
+    <input [mdbValidate]="true" mdbInput type="password" id="typePassword"
+           class="form-control" formControlName="password" required minlength="3" />
+    <label mdbLabel class="form-label form-white" for="typePassword">New Password</label>
+    <mdb-error *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+      Password is required
+    </mdb-error>
+    <mdb-success *ngIf="password?.valid && (password?.dirty || password?.touched)">
+      Looks good!
+    </mdb-success>
+    </mdb-form-control>
+    <span class="text-danger error-input" *ngIf="submitted && errorFieldSubmitted['password']"
+          style="white-space: pre-line;  font-size: 14px;">
+          {{errorFieldSubmitted['password'] | apiErrorMessage}}
+      <br><br>
+    </span>
+  </div>
+  <br>
+
+  <!--###################### Confirm Password input field ###################### -->
+  <div class="form-outline">
+    <mdb-form-control  class="form-outline">
+    <input [mdbValidate]="true" mdbInput type="password" id="typeConfirmPassword"
+           class="form-control" formControlName="confirmPassword" required minlength="3" />
+    <label mdbLabel class="form-label form-white" for="typeConfirmPassword">Confirm Password</label>
+      <mdb-error *ngIf="confirmPassword?.invalid && (confirmPassword?.dirty || confirmPassword?.touched)">
+        Retype password is required
+      </mdb-error>
+      <mdb-success *ngIf="confirmPassword?.valid && (confirmPassword?.dirty || confirmPassword?.touched)">
+        Looks good!
+      </mdb-success>
+    </mdb-form-control>
+    <span class="text-danger error-input" *ngIf="submitted && errorFieldSubmitted['confirmPassword']"
+          style="white-space: pre-line;  font-size: 14px;">
+          {{errorFieldSubmitted['confirmPassword'] | apiErrorMessage}}
+      <br><br>
+    </span>
+  </div>
+  </form>
+  </div>
+
+
+  <!--Grid row-->
+  <div  *ngIf="!isSuccessful" class="row d-flex align-items-lg-center border-bottom-0 ">
+    <!--Grid column-->
+    <div class="text-center mb-2  col-md-12 border-bottom-0">
+      <button type="button" (click)="onSubmit()" class="btn btn-success btn-block btn-rounded z-depth-1 waves-effect waves-light border-bottom-0"
+      style="margin-bottom: 0;">Replace Password</button>
+    </div>
+  </div>
+  <div hidden class="list-group-horizontal mb-4 col-md-12">
+    <button type="button" class=" fa-pull-left btn btn-primary">Save changes</button>
+    <button type="button" class="fa-pull-right btn btn-secondary" (click)="modalRef.close()">Close</button>
+  </div>
+
+</div>
+
+
+
+<div class="modal-content ">
+    <div class="modal-footer fal">
+      <input type="checkbox" class=" form-check-input" id="checkbox7">
+      <label for="checkbox7" class="form-check-label white-text">Subscribe to our <a href="#" class="green-text font-weight-bold"> newsletter?</a></label>
+  </div>
+</div>
+
+

@@ -1,0 +1,92 @@
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+.card-container.card {
+  max-width: 400px !important;
+  padding: 10px 10px;
+
+}
+
+.card {
+  background-color: #f7f7f7;
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  margin-top: 50px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-card {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+._1Q9if, ._2Hij5 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: start;
+  pointer-events: none;
+}
+
+._3SQN-, ._3wnIc {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.multi-bg-example {
+  width: 980px;
+  height: 289px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.font_0 {
+  font-size:44px;
+  text-align:left;
+  color:#FFFFFF;
+}
+
+.alert, .alert-success {
+  width: 50%;
+}
+
+
+.background {
+  background-size: cover;
+  background-origin: border-box;
+  background-image: url(../_services/assets/images/Background.webp);
+  /*linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));*/
+  background-repeat: no-repeat;
+  background-position: top left;
+
+}
+
+.card-footer {
+  padding-top: 0.1rem;
+  padding-right: 0.1rem;
+  padding-bottom: 0.1rem;
+  padding-left: 0.1rem;
+
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.125);
+
+  border-bottom: 0.1rem;
+  background-color: rgba(0, 0, 0, 0.03);
+
+}
+
+.footer ul.footer-menu li.bold a {
+  font-weight: 700;
+}

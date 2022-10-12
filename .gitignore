@@ -1,0 +1,4 @@
+# Project exclude paths
+/AccGateFrontend/node_modules/
+/node_modules/
+/out/

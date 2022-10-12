@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AccGateBackend/AccGateBackend.iml" filepath="$PROJECT_DIR$/AccGateBackend/AccGateBackend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AccGateFrontend/AccGateFrontend.iml" filepath="$PROJECT_DIR$/AccGateFrontend/AccGateFrontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/accGate.iml" filepath="$PROJECT_DIR$/.idea/accGate.iml" />
+    </modules>
+  </component>
+</project>

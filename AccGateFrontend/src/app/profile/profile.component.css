@@ -1,0 +1,78 @@
+.app-icon {
+  width: 64px;
+  height: 64px;
+}
+
+.app-icon-wide {
+  width: 181px;
+  height: 65px;
+}
+
+
+/* ====== media ====== */
+.media {margin:10px;}
+.media, .media-body {overflow:hidden; _overflow:visible; zoom:1;}
+.media .app-icon {float:left; margin-right: 20px;}
+.media .app-icon-wide {float:left; margin-right: 10px;}
+.media .app-icon app-icon{display:block;}
+.media .imgExt{float:right; margin-left: 10px;}
+
+.mr-2 {
+  width: 64px;
+  height: 64px;
+  /*background-image: url(../../assets/images/management.png);*/
+  background-repeat: round;
+  background-position: top left;
+  /*background-origin: padding-box, content-box;*/
+  alt: "jh,hgj,hjk";
+}
+
+.mr-3 {
+  width: 64px;
+  height: 64px;
+  background-image: url(../_services/assets/images/management.png);
+  background-repeat: round;
+  background-position: top left;
+  /*background-origin: padding-box, content-box;*/
+  alt: "jh,hgj,hjk";
+}
+
+
+.font_0 {
+  font-size:44px;
+  text-align:center;
+  color:#FFFFFF;
+}
+
+
+
+.background {
+  background-size: cover;
+  background-origin: border-box;
+  background-image: url(../_services/assets/images/Background.webp);
+  /*linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));*/
+  background-repeat: no-repeat;
+  background-position: top left;
+
+}
+
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}

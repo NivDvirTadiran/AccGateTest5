@@ -1,0 +1,138 @@
+<div class="modal-header">
+  <!--div class="text-center"-->
+    <label class="white-text mb-2 mt-2 font-weight-bold fas">
+      <strong>REGISTRATION</strong>
+      <a class="green-text font-weight-bold">
+        <strong> FORM</strong>
+      </a>
+    </label>
+
+  <!--/div-->
+  <button type="button" class="btn-close" aria-label="Close" (click)='modalRef.close("xbutton")'></button>
+
+  <!--h5 class="modal-title" id="exampleModalLabel">REGISTRATION</h5-->
+
+</div>
+<div class="modal-body py-4 text-center expansionCard">
+  <img id="profile-img" src="../../../AccGate/assets/images/T.png"
+       class="profile-img-card"  alt=""/>
+  <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-2">
+
+
+  <form *ngIf="!isSuccessful" [formGroup]="validationForm">
+
+  <!--###################### Username input field ###################### -->
+  <div class="form-outline">
+    <mdb-form-control  class="form-outline">
+    <input [mdbValidate]="true" mdbInput type="text" id="typeText"
+           class="form-control"  formControlName="userName" required />
+    <label class="form-label " for="typeText" >UserName input</label>
+    <mdb-error *ngIf="userName?.invalid && (userName?.dirty || userName?.touched)">
+      First name is required
+    </mdb-error>
+    <mdb-success *ngIf="userName?.valid && (userName?.dirty || userName?.touched)">
+      Looks good!
+    </mdb-success>
+    </mdb-form-control>
+  </div>
+
+  <br>
+
+    <!--###################### Email input field ###################### -->
+  <div class="form-outline">
+    <mdb-form-control  class="form-outline">
+      <input [mdbValidate]="true" mdbInput type="email" id="typeEmail"
+             class="form-control" formControlName="email" required />
+      <label mdbLabel class="form-label form-white" for="typeEmail">Email input</label>
+      <mdb-error *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+        Email is required
+      </mdb-error>
+      <mdb-success *ngIf="email?.valid && (email?.dirty || email?.touched)">
+        Looks good!
+      </mdb-success>
+    </mdb-form-control>
+  </div>
+
+
+  <br>
+
+    <!--###################### Password input field ###################### -->
+  <div class="form-outline">
+    <mdb-form-control  class="form-outline">
+    <input [mdbValidate]="true" mdbInput type="password" id="typePassword"
+           class="form-control" formControlName="password" required minlength="1" />
+    <label mdbLabel class="form-label form-white" for="typePassword">Password input</label>
+    <mdb-error *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+      Password is required
+    </mdb-error>
+      <!--mdb-error *ngIf="email?.errors.length">  Username must be at least 3 characters</mdb-error-->
+    <mdb-success *ngIf="password?.valid && (password?.dirty || password?.touched)">
+      Looks good!
+    </mdb-success>
+    </mdb-form-control>
+    <span class="text-danger error-input" *ngIf="submitted && errorFieldSubmitted['password']"
+          style="white-space: pre-line;  font-size: 14px;">
+          {{errorFieldSubmitted['password'] | apiErrorMessage}}
+      <br><br>
+    </span>
+  </div>
+
+
+  <br>
+
+    <!--###################### Phone input field ###################### -->
+  <div class="form-outline">
+    <mdb-form-control  class="form-outline">
+    <input [mdbValidate]="true" mdbInput type="tel" id="typePhone"
+           class="form-control" formControlName="phone" required />
+    <label mdbLabel class="form-label form-white" for="typePhone">Phone number input</label>
+    <mdb-error *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)">
+      Phone is required
+    </mdb-error>
+    <mdb-success *ngIf="phone?.valid && (phone?.dirty || phone?.touched)">
+      Looks good!
+    </mdb-success>
+    </mdb-form-control>
+  </div>
+  <!--mdb-form-control>
+    <input mdbInput  type="text" class="form-control" id="exampleDatepicker"/>
+    <label mdbLabel for="exampleDatepicker" class="form-label">Select a date</label>
+    <ngb-datepicker-month [NgbDatepicker]="datepicker"></ngb-datepicker-month>
+    <ngb-datepicker #dateSelect></ngb-datepicker>
+  </mdb-form-control-->
+    <!--div class="form-group">
+      <button class="btn btn-primary btn-block">Login</button>
+    </div-->
+    <!--Grid row-->
+    <div  *ngIf="!isSuccessful" class="row d-flex align-items-lg-center ">
+      <!--Grid column-->
+      <div class="form-group text-center mb-2  col-md-12 ">
+        <button type="button" (click)="onSubmit()" class="btn btn-success btn-block btn-rounded z-depth-1 waves-effect waves-light">Register</button>
+      </div>
+    </div>
+  </form>
+  </div>
+
+  <div class="alert alert-success" *ngIf="isSuccessful">
+    Your registration is successful!
+  </div>
+
+
+  <div hidden class="list-group-horizontal mb-4 col-md-12">
+    <button type="button" class=" fa-pull-left btn btn-primary">Save changes</button>
+    <!--button type="button" class="fa-pull-right btn btn-secondary" (click)="this.modalRef.close()">Close</button-->
+  </div>
+
+  <br>
+</div>
+
+
+
+<div class="modal-content ">
+    <div class="modal-footer fal">
+      <input type="checkbox" class=" form-check-input" id="checkbox7">
+      <label for="checkbox7" class="form-check-label white-text">Subscribe to our <a href="#" class="green-text font-weight-bold"> newsletter?</a></label>
+  </div>
+</div>
+
+

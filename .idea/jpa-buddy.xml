@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpaBuddyIdeaProjectConfig">
+    <option name="defaultUnitInitialized" value="true" />
+    <option name="reverseEngineeringLastDbConnectionId" value="8fc55085-e32e-42a0-86a8-3fc869152866" />
+    <option name="reLastEntityCreationPackage" value="AccGateBackend/src/main/java/tadiran/gateserver/models" />
+    <reUseDbSnapshotConnections>
+      <dbConnection id="8fc55085-e32e-42a0-86a8-3fc869152866" />
+    </reUseDbSnapshotConnections>
+    <option name="reIgnoreSlowDbConnections">
+      <ignoreDs id="8fc55085-e32e-42a0-86a8-3fc869152866" />
+    </option>
+  </component>
+</project>
